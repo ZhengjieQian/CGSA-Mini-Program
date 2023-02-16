@@ -1,0 +1,7 @@
+<!-- index.wxml -->
+<view class="container">
+  <view class="title" style="font-size: small;text-align: center;">【男保姆】式教你打开第一个微信小程序</view>
+  <view class="environment" style=" width: 50px;height: 20px;margin-bottom: 10rpx;text-align: center;">{{nickName}}</view>
+  <image src="{{img}}" style=" width: 50px;height: 50px;"></image>
+  <button type="default"  bindtap="getUserInfor" hidden="{{hiddenButton}}">获取信息</button>
+</view>

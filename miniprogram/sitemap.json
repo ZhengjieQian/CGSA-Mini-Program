@@ -1,0 +1,7 @@
+{
+  "desc": "配置是否允许微信对小程序内的信息进行索引，当用户的搜索词条触发该索引时，小程序的页面将可能展示在搜索结果中。关于本文件的更多信息，请参考文档 https://developers.weixin.qq.com/miniprogram/dev/framework/sitemap.html",
+  "rules": [{
+    "action": "allow",
+    "page": "*"
+  }]
+}

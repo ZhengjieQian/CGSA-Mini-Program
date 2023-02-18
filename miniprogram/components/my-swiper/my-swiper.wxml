@@ -1,0 +1,11 @@
+<!-- my-swiper.wxml -->
+<view class="container">
+  <swiper class="swiper" style="height:{{swiperHeight}}"
+    indicator-dots="{{showIndicatorDots}}" autoplay="{{autoPlay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{images}}" wx:key="*this">
+      <swiper-item>
+        <image class="image" src="{{item}}" mode="{{imageMode}}" bindload="calSwiperHeight"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

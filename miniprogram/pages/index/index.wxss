@@ -1,1 +1,4 @@
-/** index.wxss **/
+/* pages/index/index.wxss */
+.button-panel-container, .button-row-container {
+  padding: 15rpx 30rpx;
+}

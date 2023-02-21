@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "my-swiper": "../../components/my-swiper/my-swiper"
+    "index-swiper": "../../components/index-swiper/index-swiper",
+    "index-button-panel": "../../components/index-button-panel/index-button-panel",
+    "index-button-row": "../../components/index-button-row/index-button-row"
   }
 }

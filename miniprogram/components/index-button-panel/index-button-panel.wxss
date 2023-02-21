@@ -1,0 +1,37 @@
+/* components/index-button-panel/index-button-panel.wxss */
+.container {
+  background-color: #FFFFFF;
+  padding: 35rpx 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.4rem;
+  box-shadow: 0 0 7px -5px #464966;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.blank-between-row {
+  height: 75rpx;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image {
+  height: 90rpx;
+  width: 90rpx;
+  border-radius: 1.25rem;
+}
+
+.text {
+  margin-top: 10rpx;
+  font-size: 0.8rem;
+}

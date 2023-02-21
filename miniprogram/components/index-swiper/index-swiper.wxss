@@ -1,0 +1,12 @@
+/** components/index-swiper/index-swiper.wxss **/
+.container {
+  width: 100%;
+}
+
+.swiper {
+  width: 100%;
+}
+
+.image {
+  width: 100%;
+}

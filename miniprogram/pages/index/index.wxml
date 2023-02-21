@@ -1,4 +1,6 @@
-<!-- index.wxml -->
+<!-- pages/index/index.wxml -->
 <view class="container">
-  <my-swiper></my-swiper>
+  <view class="swiper-container"><index-swiper></index-swiper></view>
+  <view class="button-panel-container"><index-button-panel></index-button-panel></view>
+  <view class="button-row-container"><index-button-row></index-button-row></view>
 </view>

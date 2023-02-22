@@ -1,4 +1,23 @@
 /* pages/index/index.wxss */
-.button-panel-container, .button-row-container {
+.content-container {
   padding: 15rpx 30rpx;
+}
+
+.button-panel-container {
+  padding: 15rpx 0;
+}
+
+.button-row-container {
+  padding: 15rpx 0;
+}
+
+.text-row-container {
+  margin: 25rpx 0;
+  padding: 0 10rpx;
+  border-left: 2px #f8c68d solid;
+}
+
+.text {
+  font-size: 0.95rem;
+  color: #999999;
 }

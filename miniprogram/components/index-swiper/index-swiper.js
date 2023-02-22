@@ -19,7 +19,7 @@ Component({
       '../../images/index-swiper/index-swiper3.jpg',
       '../../images/index-swiper/index-swiper4.jpg'
     ],
-    swiperHeight: '350rpx',
+    swiperHeight: '340rpx',
     autoCalSwiperHeight: false,
     showIndicatorDots: true,
     autoPlay: true,

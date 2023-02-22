@@ -1,0 +1,15 @@
+<!-- components/index-posts/index-posts.wxml -->
+<view class="container">
+  <block wx:for="{{posts}}" wx:key="*this">
+    <view class="post-container">
+      <view class="image-container">
+        <image class="image" src="{{item.image}}"></image>
+      </view>
+      <view class="blank-space"></view>
+      <view class="text-container">
+        <text class="title">{{item.title}}</text>
+        <text class="date">{{item.date}}</text>
+      </view>
+    </view>
+  </block>
+</view>

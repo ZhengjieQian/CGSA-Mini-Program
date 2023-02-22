@@ -1,21 +1,14 @@
 <!-- components/index-button-row/index-button-row.wxml -->
 <view class="container">
-  <view class="button">
-    <view class="button-texts">
-      <text class="text-title">学生会</text>
-      <text class="text-subtitle">简介及成员</text>
+  <block wx:for="{{buttons}}" wx:key="*this">
+    <view class="button">
+      <view class="button-texts">
+        <text class="text-title">{{item.title}}</text>
+        <text class="text-subtitle">{{item.subtitle}}</text>
+      </view>
+      <view class="button-image">
+        <image class="image" src="{{item.image}}"></image>
+      </view>
     </view>
-    <view class="button-image">
-      <image class="image" src="../../images/index-button-row/index-button-row1.jpg"></image>
-    </view>
-  </view>
-  <view class="button">
-    <view class="button-texts">
-      <text class="text-title">学校</text>
-      <text class="text-subtitle">学校概况</text>
-    </view>
-    <view class="button-image">
-      <image class="image" src="../../images/index-button-row/index-button-row2.jpg"></image>
-    </view>
-  </view>
+  </block>
 </view>

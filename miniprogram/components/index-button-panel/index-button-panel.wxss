@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   border-radius: 0.4rem;
-  box-shadow: 0 0 7px -5px #464966;
+  box-shadow: 0 0 15px -10px #7f88ff;
 }
 
 .row {

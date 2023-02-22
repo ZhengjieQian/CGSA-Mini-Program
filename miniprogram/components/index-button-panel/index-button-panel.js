@@ -52,4 +52,4 @@ Component({
   methods: {
 
   }
-})
+});

@@ -1,6 +1,10 @@
 <!-- pages/index/index.wxml -->
 <view class="container">
   <view class="swiper-container"><index-swiper></index-swiper></view>
-  <view class="button-panel-container"><index-button-panel></index-button-panel></view>
-  <view class="button-row-container"><index-button-row></index-button-row></view>
+  <view class="content-container">
+    <view class="button-panel-container"><index-button-panel></index-button-panel></view>
+    <view class="button-row-container"><index-button-row></index-button-row></view>
+    <view class="text-row-container"><text class="text">校园动态</text></view>
+    <view class="posts-container"><index-posts></index-posts></view>
+  </view>
 </view>

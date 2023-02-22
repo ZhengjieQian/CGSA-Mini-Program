@@ -1,0 +1,44 @@
+/* components/index-posts/index-posts.wxss */
+.container {
+  margin-top: 50rpx;
+}
+
+.post-container {
+  height: 160rpx;
+  margin: 20rpx 0;
+  padding: 40rpx 25rpx;
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 0.4rem;
+  box-shadow: 0 0 15px -10px #7f88ff;
+}
+
+.image-container {
+  flex: 1;
+}
+
+.blank-space {
+  flex: 0.1;
+}
+
+.text-container {
+  flex: 1.85;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Times New Roman', Times, sans-serif;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  line-height: 1.75rem;
+}
+
+.date {
+  font-size: 0.7rem;
+  color: #999999;
+}

@@ -1,2 +1,15 @@
-<!--pages/events/index.wxml-->
-<text>pages/events/index.wxml</text>
+<!-- pages/events/index.wxml -->
+<view class="container">
+  <scroll-view scroll-x="{{true}}" class="tab">
+    <block wx:for="{{tabs}}" wx:key="*this">
+      <view class="tab-item {{curTabIndex == index ? 'active':''}}" data-current-index="{{index}}" bindtap="changeTab"></view>
+    </block>
+  </scroll-view>
+  <swiper class="swiper" current="{{curTabIndex}}" bindchange="changeSwiper" bindtouchmove="touchmove">
+    <block wx:for="{{tabs}}" wx:key="*this">
+      <swiper-item style="overflow:scroll">
+        <view>{{item}}</view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

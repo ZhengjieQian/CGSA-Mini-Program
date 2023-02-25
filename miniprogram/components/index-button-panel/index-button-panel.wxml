@@ -1,7 +1,7 @@
 <!-- components/index-button-panel/index-button-panel.wxml -->
 <view class="container">
   <view class="row">
-    <block wx:for="{{row1Buttons}}" wx:key="*this">
+    <block wx:for="{{row1Buttons}}" wx:key="title">
       <view class="button">
         <image class="image" src="{{item.image}}"></image>
         <text class="text">{{item.title}}</text>
@@ -10,7 +10,7 @@
   </view>
   <view class="blank-between-row"></view>
   <view class="row">
-    <block wx:for="{{row2Buttons}}" wx:key="*this">
+    <block wx:for="{{row2Buttons}}" wx:key="title">
       <view class="button">
         <image class="image" src="{{item.image}}"></image>
         <text class="text">{{item.title}}</text>

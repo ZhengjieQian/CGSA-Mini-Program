@@ -1,14 +1,42 @@
 <!-- pages/events/index.wxml -->
 <view class="container">
-  <scroll-view scroll-x="{{true}}" class="tab">
-    <block wx:for="{{tabs}}" wx:key="*this">
-      <view class="tab-item {{curTabIndex == index ? 'active':''}}" data-current-index="{{index}}" bindtap="changeTab"></view>
+  <view class="tab">
+    <block wx:for="{{tab}}" wx:key="title">
+      <view class="tab-item {{curTabIndex == index ? 'active' : ''}}"
+        data-current-index="{{index}}" bindtap="changeTab">
+        {{item.title}}
+      </view>
     </block>
-  </scroll-view>
-  <swiper class="swiper" current="{{curTabIndex}}" bindchange="changeSwiper" bindtouchmove="touchmove">
-    <block wx:for="{{tabs}}" wx:key="*this">
-      <swiper-item style="overflow:scroll">
-        <view>{{item}}</view>
+  </view>
+  <swiper class="swiper" current="{{curTabIndex}}" bindchange="changeSwiper">
+    <block wx:for="{{tab}}" wx:key="title">
+      <swiper-item>
+        <block wx:if="{{item.data.length == 0}}">
+          <view class="no-event-container">
+            <image class="no-event-image" src="{{noEventImage}}"></image>
+            <text class="no-event-text">暂时没活动</text>
+          </view>
+        </block>
+        <block wx:else>
+          <scroll-view class="events-container" scroll-y="true">
+            <block wx:for="{{item.data}}" wx:key="id">
+              <view class="event-widget">
+                <image class="event-image" src="{{item.image}}" mode="aspectFill"></image>
+                <view class="event-content">
+                  <text class="event-title">{{item.title}}</text>
+                  <view class="event-subtitle">
+                    <image class="event-icon" src="{{eventLocationIcon}}"></image>
+                    <text class="event-location-text">{{item.location}}</text>
+                  </view>
+                  <view class="event-subtitle">
+                    <image class="event-icon" src="{{eventDateIcon}}"></image>
+                    <text class="event-date-text">{{item.date}}</text>
+                  </view>
+                </view>
+              </view>
+            </block>
+          </scroll-view>
+        </block>
       </swiper-item>
     </block>
   </swiper>

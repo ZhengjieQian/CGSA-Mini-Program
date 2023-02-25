@@ -1,6 +1,6 @@
 <!-- components/index-button-row/index-button-row.wxml -->
 <view class="container">
-  <block wx:for="{{buttons}}" wx:key="*this">
+  <block wx:for="{{buttons}}" wx:key="title">
     <view class="button">
       <view class="button-texts">
         <text class="text-title">{{item.title}}</text>

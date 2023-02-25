@@ -24,8 +24,7 @@ Component({
     showIndicatorDots: true,
     autoPlay: true,
     interval: 5000,
-    duration: 1300,
-    imageMode: 'widthFixed'
+    duration: 1300
   },
 
   /**

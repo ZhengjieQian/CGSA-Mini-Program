@@ -1,9 +1,9 @@
 <!-- components/index-posts/index-posts.wxml -->
 <view class="container">
-  <block wx:for="{{posts}}" wx:key="*this">
+  <block wx:for="{{posts}}" wx:key="id">
     <view class="post-container">
       <view class="image-container">
-        <image class="image" src="{{item.image}}"></image>
+        <image class="image" src="{{item.image}}" mode="aspectFill"></image>
       </view>
       <view class="blank-space"></view>
       <view class="text-container">

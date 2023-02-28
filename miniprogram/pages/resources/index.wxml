@@ -1,2 +1,12 @@
-<!--pages/resources/index.wxml-->
-<text>pages/resources/index.wxml</text>
+<!-- pages/resources/index.wxml -->
+<view class="container">
+  <image class="top-image" src="{{topImage}}"></image>
+  <block wx:for="{{resources}}" wx:key="id">
+    <view class="resource-container">
+      <image class="resource-image" src="{{item.image}}" mode="aspectFill"></image>
+      <view class="resource-content">
+        <text class="resource-title">{{item.title}}</text>
+      </view>
+    </view>
+  </block>
+</view>

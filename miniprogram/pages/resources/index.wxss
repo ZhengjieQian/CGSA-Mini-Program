@@ -1,1 +1,52 @@
 /* pages/resources/index.wxss */
+.container {
+  padding: 0 35rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-image {
+  width: 100%;
+  height: 320rpx;
+  margin-top: 20rpx;
+  border-radius: 0.4rem;
+  box-shadow: 0 0 15px -10px #7f88ff;
+}
+
+.resource-container {
+  margin-top: 20rpx;
+  width: 100%;
+  height: 250rpx;
+  position: relative;
+  border-radius: 0.4rem;
+  box-shadow: 0 0 15px -10px #7f88ff;
+  background-color: #959595;
+}
+
+.resource-image {
+  width: 100%;
+  height: 250rpx;
+  position: absolute;
+  border-radius: 0.4rem;
+  filter: brightness(0.62);
+}
+
+.resource-content {
+  width: 100%;
+  height: 250rpx;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resource-title {
+  padding: 0 30rpx;
+  color: #ffffff;
+  font-family: 'Times New Roman', Times, sans-serif;
+  font-size: 1.40rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

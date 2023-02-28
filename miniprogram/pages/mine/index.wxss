@@ -1,1 +1,55 @@
 /* pages/mine/index.wxss */
+.container {
+  padding: 0 35rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.promotion-card {
+  margin-top: 20rpx;
+  width: 100%;
+  height: 300rpx;
+  position: relative;
+  border-radius: 0.4rem;
+  box-shadow: 0 0 15px -10px #7f88ff;
+}
+
+.promotion-card-bg {
+  width: 100%;
+  height: 300rpx;
+  position: absolute;
+  border-radius: 0.4rem;
+}
+
+.promotion-card-content {
+  width: 100%;
+  height: 300rpx;
+  position: absolute;
+  display: flex;
+  z-index: 1;
+}
+
+.userinfo-container {
+  width: 100%;
+  padding: 25rpx 30rpx;
+  display: flex;
+}
+
+.userinfo-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 2rem;
+}
+
+.userinfo-login {
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userinfo-login-text {
+  padding-left: 30rpx;
+  color: #c83929;
+  font-size: 1rem;
+}

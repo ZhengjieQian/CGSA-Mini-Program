@@ -8,7 +8,8 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     promotionCardBackgroundImage: '../../images/mine/promotion_card_background.jpg',
-    avatarDefaultImage: '../../images/mine/avatar_default.png'
+    avatarDefaultImage: '../../images/mine/avatar_default.png',
+    userLocation: '加利福尼亚州'
   },
   getUserProfile(e) {
     wx.getUserProfile({
@@ -20,5 +21,8 @@ Page({
         });
       }
     });
+  },
+  claimCard() {
+    console.log('获取折扣卡');
   }
 });

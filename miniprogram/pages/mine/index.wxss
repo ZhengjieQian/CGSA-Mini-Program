@@ -29,10 +29,18 @@
   z-index: 1;
 }
 
-.userinfo-container {
+.card-container {
   width: 100%;
-  padding: 25rpx 30rpx;
+  padding: 15rpx 30rpx;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.userinfo-container {
+  margin-top: 10rpx;
+  display: flex;
+  align-items: center;
 }
 
 .userinfo-avatar {
@@ -42,7 +50,6 @@
 }
 
 .userinfo-login {
-  height: 100rpx;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,4 +59,52 @@
   padding-left: 30rpx;
   color: #c83929;
   font-size: 1rem;
+}
+
+.userinfo-nickname-container {
+  height: 100%;
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.userinfo-nickname {
+  font-size: 1.25rem;
+}
+
+.userinfo-location {
+  font-size: 0.85rem;
+  color: #999999;
+}
+
+.userinfo-updateinfo-container {
+  width: 125rpx;
+  margin-left: 20rpx;
+  border-radius: 1rem;
+  background-color: #e2b958;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userinfo-updateinfo {
+  color: #ffffff;
+  font-size: 0.8rem;
+}
+
+.claim-container {
+  display: flex;
+}
+
+.claim {
+  height: 60rpx;
+  padding: 0rpx 10rpx;
+  display: flex;
+  align-items: center;
+}
+
+.claim-text {
+  font-weight: bold;
+  font-size: 0.95rem;
 }

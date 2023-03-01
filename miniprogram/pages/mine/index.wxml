@@ -3,16 +3,31 @@
   <view class="promotion-card">
     <image class="promotion-card-bg" src="{{promotionCardBackgroundImage}}"></image>
     <view class="promotion-card-content">
-      <view class="userinfo-container">
+      <view class="card-container">
         <block wx:if="{{!hasUserInfo}}">
+          <view class="userinfo-container">
             <image class="userinfo-avatar" src="{{avatarDefaultImage}}"></image>
             <view class="userinfo-login" bindtap="getUserProfile">
               <text class="userinfo-login-text">点击登录</text>
             </view>
+          </view>
         </block>
         <block wx:else>
-          <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
-          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+          <view class="userinfo-container">
+            <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+            <view class="userinfo-nickname-container">
+              <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+              <text class="userinfo-location">{{userLocation}}</text>
+            </view>
+            <view class="userinfo-updateinfo-container">
+              <text class="userinfo-updateinfo">更新资料</text>
+            </view>
+          </view>
+          <view class="claim-container">
+            <view class="claim" bindtap="claimCard">
+              <text class="claim-text">立即领取  >></text>
+            </view>
+          </view>
         </block>
       </view>
     </view>

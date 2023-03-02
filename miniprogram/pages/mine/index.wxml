@@ -5,9 +5,9 @@
     <view class="promotion-card-content">
       <view class="card-container">
         <block wx:if="{{!hasUserInfo}}">
-          <view class="userinfo-container">
+          <view class="userinfo-container" bindtap="getUserProfile">
             <image class="userinfo-avatar" src="{{avatarDefaultImage}}"></image>
-            <view class="userinfo-login" bindtap="getUserProfile">
+            <view class="userinfo-login">
               <text class="userinfo-login-text">点击登录</text>
             </view>
           </view>
@@ -32,4 +32,10 @@
       </view>
     </view>
   </view>
+  <block wx:for="{{widgets}}" wx:key="title">
+    <view class="widget-container">
+      <text class="widget-text">{{item.title}}</text>
+      <image class="widget-image" src="{{item.image}}" mode="widthFix"></image>
+    </view>
+  </block>
 </view>

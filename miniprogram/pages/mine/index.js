@@ -9,7 +9,17 @@ Page({
     hasUserInfo: false,
     promotionCardBackgroundImage: '../../images/mine/promotion_card_background.jpg',
     avatarDefaultImage: '../../images/mine/avatar_default.png',
-    userLocation: '加利福尼亚州'
+    userLocation: '加利福尼亚州',
+    widgets: [{
+      title: '我的发布',
+      image: '../../images/mine/my_post.jpg'
+    }, {
+      title: '社团纳新',
+      image: '../../images/mine/association_recruit.jpg'
+    }, {
+      title: '联系我们',
+      image: '../../images/mine/contact_us.jpg'
+    }]
   },
   getUserProfile(e) {
     wx.getUserProfile({

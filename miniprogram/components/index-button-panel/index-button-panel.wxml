@@ -2,7 +2,7 @@
 <view class="container">
   <view class="row">
     <block wx:for="{{row1Buttons}}" wx:key="title">
-      <view class="button">
+      <view class="button" data-link="{{item.link}}" bindtap="navigate">
         <image class="image" src="{{item.image}}"></image>
         <text class="text">{{item.title}}</text>
       </view>

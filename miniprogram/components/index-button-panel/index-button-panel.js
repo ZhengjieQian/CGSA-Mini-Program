@@ -13,15 +13,15 @@ Component({
     row1Buttons: [{
       title: '二手闲置',
       image: '../../images/index-button-panel/index-button-panel1.jpg',
-      link: ''
+      link: '../../pages/second-hand-market/second-hand-market'
     }, {
       title: '租房信息',
       image: '../../images/index-button-panel/index-button-panel2.jpg',
-      link: ''
+      link: '../../pages/housing-market/housing-market'
     }, {
       title: '话题讨论',
       image: '../../images/index-button-panel/index-button-panel3.jpg',
-      link: ''
+      link: '../../pages/forum/forum'
     }, {
       title: '新生手册',
       image: '../../images/index-button-panel/index-button-panel4.jpg',
@@ -50,6 +50,10 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    navigate(e) {
+      wx.navigateTo({
+        url: e.currentTarget.dataset.link
+      });
+    }
   }
 });

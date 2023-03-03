@@ -11,6 +11,9 @@ Page({
     avatarDefaultImage: '../../images/mine/avatar_default.png',
     userLocation: '加利福尼亚州',
     widgets: [{
+      title: '我的消息',
+      image: '../../images/mine/notification.jpg'
+    }, {
       title: '我的发布',
       image: '../../images/mine/my_post.jpg'
     }, {

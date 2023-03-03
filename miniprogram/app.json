@@ -3,7 +3,10 @@
     "pages/index/index",
     "pages/events/index",
     "pages/resources/index",
-    "pages/mine/index"
+    "pages/mine/index",
+    "pages/second-hand-market/second-hand-market",
+    "pages/housing-market/housing-market",
+    "pages/forum/forum"
   ],
   "window": {
     "backgroundColor": "#FFFFFF",

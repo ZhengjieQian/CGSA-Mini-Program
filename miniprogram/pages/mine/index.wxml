@@ -35,7 +35,7 @@
   <block wx:for="{{widgets}}" wx:key="title">
     <view class="widget-container">
       <text class="widget-text">{{item.title}}</text>
-      <image class="widget-image" src="{{item.image}}" mode="widthFix"></image>
+      <image class="widget-image" src="{{item.image}}" mode="aspectFit"></image>
     </view>
   </block>
 </view>

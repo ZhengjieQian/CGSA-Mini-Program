@@ -25,24 +25,24 @@ Component({
     }, {
       title: '新生手册',
       image: '../../images/index-button-panel/index-button-panel4.jpg',
-      link: ''
+      link: '../../pages/new-student-handbook/new-student-handbook'
     }],
     row2Buttons: [{
       title: '官方社群',
       image: '../../images/index-button-panel/index-button-panel5.jpg',
-      link: ''
+      link: '../../pages/official-community/official-community'
     }, {
       title: '带逛校园',
       image: '../../images/index-button-panel/index-button-panel6.jpg',
-      link: ''
+      link: '../../pages/campus-tour/campus-tour'
     }, {
       title: '折扣卡',
       image: '../../images/index-button-panel/index-button-panel7.jpg',
-      link: ''
+      link: '../../pages/promo-card/promo-card'
     }, {
       title: '赞助商',
       image: '../../images/index-button-panel/index-button-panel8.jpg',
-      link: ''
+      link: '../../pages/sponsors/sponsors'
     }]
   },
 

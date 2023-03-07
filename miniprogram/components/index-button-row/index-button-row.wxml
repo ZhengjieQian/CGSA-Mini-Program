@@ -1,7 +1,7 @@
 <!-- components/index-button-row/index-button-row.wxml -->
 <view class="container">
   <block wx:for="{{buttons}}" wx:key="title">
-    <view class="button">
+    <view class="button" data-link="{{item.link}}" bindtap="navigate">
       <view class="button-texts">
         <text class="text-title">{{item.title}}</text>
         <text class="text-subtitle">{{item.subtitle}}</text>

@@ -6,7 +6,14 @@
     "pages/mine/index",
     "pages/second-hand-market/second-hand-market",
     "pages/housing-market/housing-market",
-    "pages/forum/forum"
+    "pages/forum/forum",
+    "pages/new-student-handbook/new-student-handbook",
+    "pages/official-community/official-community",
+    "pages/campus-tour/campus-tour",
+    "pages/promo-card/promo-card",
+    "pages/sponsors/sponsors",
+    "pages/student-association/student-association",
+    "pages/school-info/school-info"
   ],
   "window": {
     "backgroundColor": "#FFFFFF",

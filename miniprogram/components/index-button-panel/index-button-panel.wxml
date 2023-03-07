@@ -11,7 +11,7 @@
   <view class="blank-between-row"></view>
   <view class="row">
     <block wx:for="{{row2Buttons}}" wx:key="title">
-      <view class="button">
+      <view class="button" data-link="{{item.link}}" bindtap="navigate">
         <image class="image" src="{{item.image}}"></image>
         <text class="text">{{item.title}}</text>
       </view>

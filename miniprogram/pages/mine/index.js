@@ -36,6 +36,8 @@ Page({
     });
   },
   claimCard() {
-    console.log('获取折扣卡');
+    wx.navigateTo({
+      url: '../../pages/get-promo-card/get-promo-card'
+    });
   }
 });

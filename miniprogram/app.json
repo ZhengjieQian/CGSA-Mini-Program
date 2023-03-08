@@ -13,7 +13,8 @@
     "pages/promo-card/promo-card",
     "pages/sponsors/sponsors",
     "pages/student-association/student-association",
-    "pages/school-info/school-info"
+    "pages/school-info/school-info",
+    "pages/get-promo-card/get-promo-card"
   ],
   "window": {
     "backgroundColor": "#FFFFFF",

@@ -12,7 +12,8 @@ Page({
     userLocation: '加利福尼亚州',
     widgets: [{
       title: '我的消息',
-      image: '../../images/mine/notification.jpg'
+      image: '../../images/mine/notification.jpg',
+      link: '../../pages/my-notification/my-notification'
     }, {
       title: '我的发布',
       image: '../../images/mine/my_post.jpg'
@@ -38,6 +39,11 @@ Page({
   claimCard() {
     wx.navigateTo({
       url: '../../pages/get-promo-card/get-promo-card'
+    });
+  },
+  navigate(e) {
+    wx.navigateTo({
+      url: e.currentTarget.dataset.link
     });
   }
 });

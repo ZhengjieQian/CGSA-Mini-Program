@@ -33,7 +33,7 @@
     </view>
   </view>
   <block wx:for="{{widgets}}" wx:key="title">
-    <view class="widget-container">
+    <view class="widget-container" data-link="{{item.link}}" bindtap="navigate">
       <text class="widget-text">{{item.title}}</text>
       <image class="widget-image" src="{{item.image}}" mode="aspectFit"></image>
     </view>

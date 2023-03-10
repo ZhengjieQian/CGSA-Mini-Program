@@ -16,7 +16,8 @@ Page({
       link: '../../pages/my-notification/my-notification'
     }, {
       title: '我的发布',
-      image: '../../images/mine/my_post.jpg'
+      image: '../../images/mine/my_post.jpg',
+      link: '../../pages/my-posts/my-posts'
     }, {
       title: '社团纳新',
       image: '../../images/mine/association_recruit.jpg'

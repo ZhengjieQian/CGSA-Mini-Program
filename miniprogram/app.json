@@ -15,7 +15,8 @@
     "pages/student-association/student-association",
     "pages/school-info/school-info",
     "pages/get-promo-card/get-promo-card",
-    "pages/my-notification/my-notification"
+    "pages/my-notification/my-notification",
+    "pages/my-posts/my-posts"
   ],
   "window": {
     "backgroundColor": "#FFFFFF",

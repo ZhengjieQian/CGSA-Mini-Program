@@ -20,7 +20,8 @@ Page({
       link: '../../pages/my-posts/my-posts'
     }, {
       title: '社团纳新',
-      image: '../../images/mine/association_recruit.jpg'
+      image: '../../images/mine/association_recruit.jpg',
+      link: '../../pages/association-recruit/association-recruit'
     }, {
       title: '联系我们',
       image: '../../images/mine/contact_us.jpg'

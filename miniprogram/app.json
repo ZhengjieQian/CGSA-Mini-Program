@@ -16,7 +16,8 @@
     "pages/school-info/school-info",
     "pages/get-promo-card/get-promo-card",
     "pages/my-notification/my-notification",
-    "pages/my-posts/my-posts"
+    "pages/my-posts/my-posts",
+    "pages/association-recruit/association-recruit"
   ],
   "window": {
     "backgroundColor": "#FFFFFF",

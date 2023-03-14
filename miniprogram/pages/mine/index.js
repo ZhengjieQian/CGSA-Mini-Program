@@ -24,7 +24,8 @@ Page({
       link: '../../pages/association-recruit/association-recruit'
     }, {
       title: '联系我们',
-      image: '../../images/mine/contact_us.jpg'
+      image: '../../images/mine/contact_us.jpg',
+      link: '../../pages/contact-us/contact-us'
     }]
   },
   getUserProfile(e) {

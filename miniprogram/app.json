@@ -17,7 +17,8 @@
     "pages/get-promo-card/get-promo-card",
     "pages/my-notification/my-notification",
     "pages/my-posts/my-posts",
-    "pages/association-recruit/association-recruit"
+    "pages/association-recruit/association-recruit",
+    "pages/contact-us/contact-us"
   ],
   "window": {
     "backgroundColor": "#FFFFFF",

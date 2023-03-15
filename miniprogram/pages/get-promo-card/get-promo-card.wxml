@@ -1,2 +1,61 @@
 <!--pages/get-promo-card/get-promo-card.wxml-->
-<text>pages/get-promo-card/get-promo-card.wxml</text>
+<form>
+  <view class="container">
+    <view class="info-container">
+      <view class="info-row">
+        <view class="info-title">
+          <text>姓名</text>
+          <text class="text-red">∗</text>
+        </view>
+        <view class="info-input">
+          <input type="text" placeholder="请输入姓名" />
+        </view>
+      </view>
+      <view class="info-row">
+        <view class="info-title">
+          <text>性别</text>
+        </view>
+        <view class="info-input">
+          <input type="text" placeholder="请输入姓名" />
+        </view>
+      </view>
+      <view class="info-row">
+        <view class="info-title">
+          <text>邮箱</text>
+          <text class="text-red">∗</text>
+        </view>
+        <view class="info-input">
+          <input type="text" placeholder="请输入邮箱" />
+        </view>
+      </view>
+      <view class="info-row">
+        <view class="info-title">
+          <text>电话</text>
+        </view>
+        <view class="info-input">
+          <input type="text" placeholder="请输入电话" />
+        </view>
+      </view>
+      <view class="info-row">
+        <view class="info-title">
+          <text>就读学校</text>
+        </view>
+        <view class="info-input">
+          <input type="text" placeholder="请输入就读学校" />
+        </view>
+      </view>
+      <view class="info-row">
+        <view class="info-title">
+          <text>生日</text>
+        </view>
+        <view class="info-input">
+          <input type="text" placeholder="请输入姓名" />
+        </view>
+      </view>
+    </view>
+    <view class="btn-container">
+      <button form-type="submit" class="btn">提交信息</button>
+    </view>
+  </view>
+</form>
+

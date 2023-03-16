@@ -28,15 +28,30 @@
   align-items: center;
 }
 
+.info-input {
+  flex: 2.25;
+  display: flex;
+  align-items: center;
+}
+
 .text-red {
   margin-left: 3rpx;
   color: red;
 }
 
-.info-input {
-  flex: 2.25;
+.text-placeholder {
+  color: #808080;
+}
+
+.picker {
+  width: 100%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.picker-content {
+  line-height: 3rem;
 }
 
 .btn-container {

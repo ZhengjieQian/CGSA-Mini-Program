@@ -16,7 +16,13 @@
           <text>性别</text>
         </view>
         <view class="info-input">
-          <input type="text" placeholder="请输入姓名" />
+          <picker class="picker" bindchange="genderPickerChanged"
+          value="{{genderPickerIndex}}" range="{{genderPickerData}}">
+            <view class="picker-content" wx:if="{{genderPickerIndex}}">
+              {{genderPickerData[genderPickerIndex]}}
+            </view>
+            <view class="picker-content" wx:else><text class="text-placeholder">请选择性别</text></view>
+          </picker>
         </view>
       </view>
       <view class="info-row">
@@ -49,7 +55,13 @@
           <text>生日</text>
         </view>
         <view class="info-input">
-          <input type="text" placeholder="请输入姓名" />
+          <picker class="picker" mode="date" bindchange="birthdayPickerChanged"
+          value="{{birthday}}"start="{{birthdayPickerStartDate}}" end="{{birthdayPickerEndDate}}">
+            <view class="picker-content" wx:if="{{birthday}}">
+              {{birthday}}
+            </view>
+            <view class="picker-content" wx:else><text class="text-placeholder">请选择生日</text></view>
+          </picker>
         </view>
       </view>
     </view>

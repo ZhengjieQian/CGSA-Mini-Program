@@ -1,5 +1,4 @@
 <!--pages/get-promo-card/get-promo-card.wxml-->
-<form>
   <view class="container">
     <view class="info-container">
       <view class="info-row">
@@ -8,7 +7,7 @@
           <text class="text-red">∗</text>
         </view>
         <view class="info-input">
-          <input type="text" placeholder="请输入姓名" />
+          <input type="text" placeholder="请输入姓名" bindinput="nameInput" />
         </view>
       </view>
       <view class="info-row">
@@ -17,9 +16,9 @@
         </view>
         <view class="info-input">
           <picker class="picker" bindchange="genderPickerChanged"
-          value="{{genderPickerIndex}}" range="{{genderPickerData}}">
+          value="{{genderPickerIndex}}" range="{{genders}}">
             <view class="picker-content" wx:if="{{genderPickerIndex}}">
-              {{genderPickerData[genderPickerIndex]}}
+              {{gender}}
             </view>
             <view class="picker-content" wx:else><text class="text-placeholder">请选择性别</text></view>
           </picker>
@@ -31,7 +30,7 @@
           <text class="text-red">∗</text>
         </view>
         <view class="info-input">
-          <input type="text" placeholder="请输入邮箱" />
+          <input type="text" placeholder="请输入邮箱" bindinput="emailInput" />
         </view>
       </view>
       <view class="info-row">
@@ -39,7 +38,7 @@
           <text>电话</text>
         </view>
         <view class="info-input">
-          <input type="text" placeholder="请输入电话" />
+          <input type="text" placeholder="请输入电话" bindinput="phoneInput" />
         </view>
       </view>
       <view class="info-row">
@@ -47,7 +46,7 @@
           <text>就读学校</text>
         </view>
         <view class="info-input">
-          <input type="text" placeholder="请输入就读学校" />
+          <input type="text" placeholder="请输入就读学校" bindinput="universityInput" />
         </view>
       </view>
       <view class="info-row">
@@ -56,7 +55,7 @@
         </view>
         <view class="info-input">
           <picker class="picker" mode="date" bindchange="birthdayPickerChanged"
-          value="{{birthday}}"start="{{birthdayPickerStartDate}}" end="{{birthdayPickerEndDate}}">
+          value="{{birthday}}" start="{{birthdayPickerStartDate}}" end="{{birthdayPickerEndDate}}">
             <view class="picker-content" wx:if="{{birthday}}">
               {{birthday}}
             </view>
@@ -66,8 +65,6 @@
       </view>
     </view>
     <view class="btn-container">
-      <button form-type="submit" class="btn">提交信息</button>
+      <button class="btn" bindtap="submitInfo">提交信息</button>
     </view>
   </view>
-</form>
-

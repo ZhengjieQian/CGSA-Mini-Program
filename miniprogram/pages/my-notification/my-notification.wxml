@@ -1,2 +1,14 @@
-<!--pages/my-notification/my-notification.wxml-->
-<text>pages/my-notification/my-notification.wxml</text>
+<!-- pages/my-notification/my-notification.wxml -->
+<view class="container">
+  <view class="btn-panel">
+    <block wx:for="{{buttons}}" wx:key="id">
+      <view class="button" data-id="{{item.id}}" bindtap="btnTapped">
+        <image class="btn-image" src="{{item.image}}" mode="aspectFit"></image>
+        <text class="btn-text">{{item.title}}</text>
+      </view>
+    </block>
+  </view>
+  <view class="blank"></view>
+  <view class="activities">
+  </view>
+</view>

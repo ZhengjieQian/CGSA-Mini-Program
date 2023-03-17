@@ -1,66 +1,28 @@
 // pages/my-notification/my-notification.js
+// 用户消息页面
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-
+    buttons: [{
+      id: '0',
+      title: '通知',
+      image: '../../images/my-notification/notification.png',
+      link: 'tongzhi'
+    }, {
+      id: '1',
+      title: '评论',
+      image: '../../images/my-notification/comment.png',
+      link: 'pinglun'
+    }, {
+      id: '2',
+      title: '点赞',
+      image: '../../images/my-notification/like.png',
+      link: 'dianzan'
+    }]
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
+  btnTapped(e) {
+    console.log(this.data.buttons[e.currentTarget.dataset.id].link);
   }
 })

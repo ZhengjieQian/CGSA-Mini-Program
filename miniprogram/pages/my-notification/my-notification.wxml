@@ -10,5 +10,9 @@
   </view>
   <view class="blank"></view>
   <view class="activities">
+    <view class="no-activity">
+      <image class="no-activity-image" src="{{noActivityImage}}"></image>
+      <text class="no-activity-text">暂无动态</text>
+    </view>
   </view>
 </view>

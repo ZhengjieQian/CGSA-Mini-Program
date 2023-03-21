@@ -20,7 +20,8 @@ Page({
       title: '点赞',
       image: '../../images/my-notification/like.png',
       link: 'dianzan'
-    }]
+    }],
+    noActivityImage: '../../images/my-notification/no_activity.jpg'
   },
   btnTapped(e) {
     console.log(this.data.buttons[e.currentTarget.dataset.id].link);

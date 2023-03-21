@@ -38,4 +38,21 @@
 
 .activities {
   background-color: #ffffff;
+  height: calc(100vh - 320rpx);
+}
+
+.no-activity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.no-activity-image {
+  margin-top: 150rpx;
+  width: 375rpx;
+  height: 375rpx;
+}
+
+.no-activity-text {
+  margin-top: 40rpx;
 }

@@ -9,7 +9,7 @@ Page({
       id: '0',
       title: '通知',
       image: '../../images/my-notification/notification.png',
-      link: 'tongzhi'
+      link: '../../pages/my-notification-broadcast/my-notification-broadcast'
     }, {
       id: '1',
       title: '评论',
@@ -24,6 +24,8 @@ Page({
     noActivityImage: '../../images/my-notification/no_activity.jpg'
   },
   btnTapped(e) {
-    console.log(this.data.buttons[e.currentTarget.dataset.id].link);
+    wx.navigateTo({
+      url: this.data.buttons[e.currentTarget.dataset.id].link
+    });
   }
 })

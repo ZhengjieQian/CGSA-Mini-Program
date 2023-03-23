@@ -14,7 +14,7 @@ Page({
       id: '1',
       title: '评论',
       image: '../../images/my-notification/comment.png',
-      link: 'pinglun'
+      link: '../../pages/my-notification-comment/my-notification-comment'
     }, {
       id: '2',
       title: '点赞',

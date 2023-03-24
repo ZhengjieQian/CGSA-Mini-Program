@@ -19,7 +19,7 @@ Page({
       id: '2',
       title: '点赞',
       image: '../../images/my-notification/like.png',
-      link: 'dianzan'
+      link: '../../pages/my-notification-like/my-notification-like'
     }],
     noActivityImage: '../../images/my-notification/no_activity.jpg'
   },

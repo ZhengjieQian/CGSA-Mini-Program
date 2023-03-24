@@ -20,7 +20,8 @@
     "pages/association-recruit/association-recruit",
     "pages/contact-us/contact-us",
     "pages/my-notification-broadcast/my-notification-broadcast",
-    "pages/my-notification-comment/my-notification-comment"
+    "pages/my-notification-comment/my-notification-comment",
+    "pages/my-notification-like/my-notification-like"
   ],
   "window": {
     "backgroundColor": "#FFFFFF",

@@ -2,7 +2,7 @@
 <view class="container">
   <view class="promotion-card">
     <image class="promotion-card-bg" src="{{promotionCardBackgroundImage}}"></image>
-    <view class="promotion-card-content">
+    <view class="promotion-card-content" bindtap="showPromoCard">
       <view class="card-container">
         <block wx:if="{{!hasUserInfo}}">
           <view class="userinfo-container" bindtap="getUserProfile">

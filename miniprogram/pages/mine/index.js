@@ -39,6 +39,13 @@ Page({
       }
     });
   },
+  showPromoCard() {
+    if (this.data.hasUserInfo) {
+      wx.navigateTo({
+        url: '../../pages/promo-card/promo-card'
+      });
+    }
+  },
   claimCard() {
     wx.navigateTo({
       url: '../../pages/get-promo-card/get-promo-card'

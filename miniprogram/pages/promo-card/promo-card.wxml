@@ -1,2 +1,15 @@
-<!--pages/promo-card/promo-card.wxml-->
-<text>show user promotional card content</text>
+<!-- pages/promo-card/promo-card.wxml -->
+<view class="container">
+  <swiper class="swiper" indicator-dots="{{showIndicatorDots}}"
+  indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}"
+  autoplay="{{autoPlay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{images}}" wx:key="*this">
+      <swiper-item>
+        <image class="image" src="{{item}}" mode="aspectFills"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="btn-row">
+
+  </view>
+</view>

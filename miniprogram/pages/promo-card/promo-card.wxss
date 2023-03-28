@@ -8,8 +8,8 @@
 }
 
 .swiper {
-  width: 100%;
   flex: 8;
+  width: 100%;
 }
 
 .image {
@@ -18,4 +18,26 @@
 
 .btn-row {
   flex:2;
+  width: 100%;
+  padding-top: 40rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.blank {
+  width: 60rpx;
+}
+
+.btn {
+  width: 180rpx;
+  height: 65rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px #fbb83f solid;
+  border-radius: 0.35rem;
+}
+
+.btn-bind {
+
 }

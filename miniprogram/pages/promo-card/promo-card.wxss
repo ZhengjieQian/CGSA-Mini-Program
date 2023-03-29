@@ -38,6 +38,14 @@
   border-radius: 0.35rem;
 }
 
-.btn-bind {
+.btn-bind-text {
+  color: #fbb83f;
+}
 
+.btn-claim {
+  background-color: #fbb83f;
+}
+
+.btn-claim-text {
+  color: #ffffff;
 }

@@ -16,6 +16,16 @@ Page({
       '../../images/promo-card/2.png',
       '../../images/promo-card/3.png',
       '../../images/promo-card/4.png'
-    ],
+    ]
   },
+  bindTapped() {
+    wx.navigateTo({
+      url: '../../pages/bind-promo-card/bind-promo-card'
+    })
+  },
+  claimTapped() {
+    wx.navigateTo({
+      url: '../../pages/get-promo-card/get-promo-card'
+    })
+  }
 });

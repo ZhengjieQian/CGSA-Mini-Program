@@ -21,7 +21,8 @@
     "pages/contact-us/contact-us",
     "pages/my-notification-broadcast/my-notification-broadcast",
     "pages/my-notification-comment/my-notification-comment",
-    "pages/my-notification-like/my-notification-like"
+    "pages/my-notification-like/my-notification-like",
+    "pages/bind-promo-card/bind-promo-card"
   ],
   "window": {
     "backgroundColor": "#FFFFFF",

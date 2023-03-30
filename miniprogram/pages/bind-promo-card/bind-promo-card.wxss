@@ -1,1 +1,61 @@
 /* pages/bind-promo-card/bind-promo-card.wxss */
+.container {
+  height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.info-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px #f4f4f4 solid;
+}
+
+.info-row {
+  width: 100%;
+  height: 110rpx;
+  border-top: 1px #f4f4f4 solid;
+  display: flex;
+}
+
+.info-title {
+  flex: 1;
+  padding-left: 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+.info-input {
+  flex: 2.25;
+  display: flex;
+  align-items: center;
+}
+
+.text-red {
+  margin-left: 3rpx;
+  color: red;
+}
+
+.text-placeholder {
+  color: #808080;
+}
+
+.btn-container {
+  width: 100%;
+}
+
+.btn {
+  width: 100% !important;
+  margin: 0 0;
+  padding: 0 0;
+  height: 125rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffd429;
+  font-size: 1.1rem;
+  font-weight: normal;
+}

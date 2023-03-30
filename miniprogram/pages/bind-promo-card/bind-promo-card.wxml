@@ -1,2 +1,26 @@
-<!--pages/bind-promo-card/bind-promo-card.wxml-->
-<text>pages/bind-promo-card/bind-promo-card.wxml</text>
+<!-- pages/bind-promo-card/bind-promo-card.wxml -->
+<view class="container">
+    <view class="info-container">
+      <view class="info-row">
+        <view class="info-title">
+          <text>卡号</text>
+          <text class="text-red">∗</text>
+        </view>
+        <view class="info-input">
+          <input type="text" placeholder="请输入卡号" bindinput="cardNoInput" />
+        </view>
+      </view>
+      <view class="info-row">
+        <view class="info-title">
+          <text>密码</text>
+          <text class="text-red">∗</text>
+        </view>
+        <view class="info-input">
+          <input type="text" placeholder="请输入密码" bindinput="passwordInput" />
+        </view>
+      </view>
+    </view>
+    <view class="btn-container">
+      <button class="btn" bindtap="submitInfo">绑定折扣卡</button>
+    </view>
+  </view>

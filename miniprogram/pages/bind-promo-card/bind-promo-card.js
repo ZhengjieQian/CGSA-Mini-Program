@@ -1,66 +1,31 @@
 // pages/bind-promo-card/bind-promo-card.js
+// 绑定折扣卡页面
 Page({
-
   /**
    * 页面的初始数据
+   * cardNo 卡号
+   * password 密码
    */
   data: {
-
+    cardNo: '',
+    password: ''
   },
-
   /**
-   * 生命周期函数--监听页面加载
+   * 页面的方法
+   * cardNoInput(e) 获取用户输入的卡号并更新到 cardNo，passwordInput(e) 同理
+   * submitInfo() 提交当前页面信息
    */
-  onLoad(options) {
-
+  cardNoInput(e) {
+    this.setData({
+      cardNo: e.detail.value
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
+  passwordInput(e) {
+    this.setData({
+      password: e.detail.value
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
+  submitInfo() {
+    console.log(this.data);
   }
-})
+});

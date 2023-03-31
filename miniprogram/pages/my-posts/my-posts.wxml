@@ -1,2 +1,17 @@
-<!--pages/my-posts/my-posts.wxml-->
-<text>pages/my-posts/my-posts.wxml</text>
+<!-- pages/my-posts/my-posts.wxml -->
+<view class="container">
+  <view class="top-tab">
+    <view class="top-tab-published">
+      <image class="top-tab-icon" src="{{topTabPublishedIcon}}" mode="aspectFit"></image>
+      <text>发布的</text>
+    </view>
+    <view class="top-tab-removed">
+      <image class="top-tab-icon" src="{{topTabRemovedIcon}}" mode="aspectFit"></image>
+      <text>下架的</text>
+    </view>
+  </view>
+  <view class="mid-tab">
+  </view>
+  <view class="content">
+  </view>
+</view>

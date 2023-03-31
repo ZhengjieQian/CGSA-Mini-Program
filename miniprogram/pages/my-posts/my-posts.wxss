@@ -1,1 +1,42 @@
 /* pages/my-posts/my-posts.wxss */
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-tab {
+  width: 100%;
+  height: 50rpx;
+  padding: 30rpx 0;
+  display: flex;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.top-tab-published {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #eeeeee;
+}
+
+.top-tab-removed {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-tab-icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+
+.mid-tab {
+  width: 100%;
+  height: 75rpx;
+  background-color: #ffffff;
+}

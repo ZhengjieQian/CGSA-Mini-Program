@@ -11,6 +11,21 @@
     </view>
   </view>
   <view class="mid-tab">
+    <view class="mid-tab-item">
+      <view class="mid-tab-text-container mid-tab-text-container-active">
+        <text class="mid-tab-text mid-tab-text-active">校友说</text>
+      </view>
+    </view>
+    <view class="mid-tab-item">
+      <view class="mid-tab-text-container">
+        <text class="mid-tab-text">二手闲置</text>
+      </view>
+    </view>
+    <view class="mid-tab-item">
+      <view class="mid-tab-text-container">
+        <text class="mid-tab-text">租房信息</text>
+      </view>
+    </view>
   </view>
   <view class="content">
   </view>

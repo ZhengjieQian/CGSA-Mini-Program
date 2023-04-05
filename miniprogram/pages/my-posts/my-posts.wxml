@@ -1,31 +1,24 @@
 <!-- pages/my-posts/my-posts.wxml -->
 <view class="container">
   <view class="top-tab">
-    <view class="top-tab-published">
-      <image class="top-tab-icon" src="{{topTabPublishedIcon}}" mode="aspectFit"></image>
-      <text>发布的</text>
-    </view>
-    <view class="top-tab-removed">
-      <image class="top-tab-icon" src="{{topTabRemovedIcon}}" mode="aspectFit"></image>
-      <text>下架的</text>
-    </view>
+    <block wx:for="{{topTab}}" wx:key="title">
+      <view class="top-tab-item {{index == 0 ? 'top-tab-item-border' : ''}}"
+        data-current-index="{{index}}" bindtap="changeTopTab">
+        <image class="top-tab-icon" mode="aspectFit"
+          src="{{curTopTabIndex == index ? item.activeImage : item.image}}"></image>
+        <text>{{item.title}}</text>
+      </view>
+    </block>
   </view>
   <view class="mid-tab">
-    <view class="mid-tab-item">
-      <view class="mid-tab-text-container mid-tab-text-container-active">
-        <text class="mid-tab-text mid-tab-text-active">校友说</text>
+    <block wx:for="{{midTab}}" wx:key="*this">
+      <view class="mid-tab-item">
+        <view class="mid-tab-text-container {{curMidTabIndex == index ? 'mid-box-active' : ''}}"
+          data-current-index="{{index}}" bindtap="changeMidTab">
+          <text class="mid-tab-text {{curMidTabIndex == index ? 'mid-text-active' : ''}}">{{item}}</text>
+        </view>
       </view>
-    </view>
-    <view class="mid-tab-item">
-      <view class="mid-tab-text-container">
-        <text class="mid-tab-text">二手闲置</text>
-      </view>
-    </view>
-    <view class="mid-tab-item">
-      <view class="mid-tab-text-container">
-        <text class="mid-tab-text">租房信息</text>
-      </view>
-    </view>
+    </block>
   </view>
   <view class="content">
     <image class="no-post-image" src="{{noPostImage}}"></image>

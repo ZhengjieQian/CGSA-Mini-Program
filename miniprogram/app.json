@@ -22,7 +22,8 @@
     "pages/my-notification-broadcast/my-notification-broadcast",
     "pages/my-notification-comment/my-notification-comment",
     "pages/my-notification-like/my-notification-like",
-    "pages/bind-promo-card/bind-promo-card"
+    "pages/bind-promo-card/bind-promo-card",
+    "pages/publish-alumni-posts/publish-alumni-posts"
   ],
   "window": {
     "backgroundColor": "#FFFFFF",

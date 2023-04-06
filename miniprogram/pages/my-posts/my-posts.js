@@ -37,6 +37,8 @@ Page({
     }
   },
   postBtnTapped() {
-    console.log('post');
+    wx.navigateTo({
+      url: '../../pages/publish-alumni-posts/publish-alumni-posts'
+    })
   }
 });

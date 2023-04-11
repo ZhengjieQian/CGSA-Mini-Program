@@ -11,20 +11,23 @@
     </block>
   </view>
   <view class="mid-tab">
-    <block wx:for="{{midTab}}" wx:key="*this">
+    <block wx:for="{{midTab}}" wx:key="title">
       <view class="mid-tab-item">
         <view class="mid-tab-text-container {{curMidTabIndex == index ? 'mid-box-active' : ''}}"
           data-current-index="{{index}}" bindtap="changeMidTab">
-          <text class="mid-tab-text {{curMidTabIndex == index ? 'mid-text-active' : ''}}">{{item}}</text>
+          <text class="mid-tab-text {{curMidTabIndex == index ? 'mid-text-active' : ''}}">{{item.title}}</text>
         </view>
       </view>
     </block>
   </view>
-  <view class="content">
-    <image class="no-post-image" src="{{noPostImage}}"></image>
-    <text class="no-post-text">没有任何记录哦~</text>
-    <view class="btn-post" bindtap="postBtnTapped">
-      <text class="btn-post-text">发布</text>
+  <block wx:for="{{midTab}}" wx:key="title">
+    <view wx:if="{{curMidTabIndex == index}}" class="content">
+      <image class="no-post-image" src="{{noPostImage}}"></image>
+      <text class="no-post-text">没有任何记录哦~</text>
+      <view class="btn-post" data-current-index="{{index}}" bindtap="postBtnTapped">
+        <text class="btn-post-text">发布</text>
+      </view>
     </view>
-  </view>
+  </block>
+
 </view>

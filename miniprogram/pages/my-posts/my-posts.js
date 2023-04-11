@@ -16,7 +16,16 @@ Page({
       activeImage: '../../images/my-post/top_tab_removed_active.jpg'
     }],
     curMidTabIndex: 0,
-    midTab: ['校友说', '二手闲置', '租房信息'],
+    midTab: [{
+      title: '校友说',
+      link: '../../pages/publish-alumni-posts/publish-alumni-posts'
+    }, {
+      title: '二手闲置',
+      link: '../../pages/publish-second-hand/publish-second-hand'
+    }, {
+      title: '租房信息',
+      link: '../../pages/publish-housing-info/publish-housing-info'
+    }],
     noPostImage: '../../images/my-post/no_post.jpg'
   },
   changeTopTab(e) {
@@ -36,9 +45,9 @@ Page({
       });
     }
   },
-  postBtnTapped() {
+  postBtnTapped(e) {
     wx.navigateTo({
-      url: '../../pages/publish-alumni-posts/publish-alumni-posts'
+      url: this.data.midTab[e.currentTarget.dataset.currentIndex].link
     })
   }
 });

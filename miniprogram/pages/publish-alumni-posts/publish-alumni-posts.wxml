@@ -1,2 +1,7 @@
-<!--pages/publish-alumni-posts/publish-alumni-posts.wxml-->
-<text>pages/publish-alumni-posts/publish-alumni-posts.wxml</text>
+<!-- pages/publish-alumni-posts/publish-alumni-posts.wxml -->
+<view class="container">
+
+</view>
+<view class="bottom-btn" bindtap="postBtnTapped">
+  <text class="bottom-btn-text">发布</text>
+</view>

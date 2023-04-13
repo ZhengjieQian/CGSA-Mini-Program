@@ -1,6 +1,9 @@
 <!-- pages/publish-alumni-posts/publish-alumni-posts.wxml -->
 <view class="container">
-
+  <view class="topic-container" bindtap="topicTapped">
+    <text class="topic-text"># 去定义话题</text>
+    <image class="topic-icon" src="{{forwardArrow}}" mode="aspectFit"></image>
+  </view>
 </view>
 <view class="bottom-btn" bindtap="postBtnTapped">
   <text class="bottom-btn-text">发布</text>

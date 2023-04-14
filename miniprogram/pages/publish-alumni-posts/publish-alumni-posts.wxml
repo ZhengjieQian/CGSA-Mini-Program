@@ -4,6 +4,10 @@
     <text class="topic-text"># 去定义话题</text>
     <image class="topic-icon" src="{{forwardArrow}}" mode="aspectFit"></image>
   </view>
+  <view class="title-container">
+    <input type="text" class="title-input" placeholder="标题（2-22字之间哦）" />
+    <text class="title-word-counter-text">0/22</text>
+  </view>
 </view>
 <view class="bottom-btn" bindtap="postBtnTapped">
   <text class="bottom-btn-text">发布</text>

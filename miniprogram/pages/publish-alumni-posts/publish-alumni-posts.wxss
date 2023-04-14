@@ -24,6 +24,25 @@
   width: 13rpx;
 }
 
+.title-container {
+  height: 100rpx;
+  margin-top: 10rpx;
+  padding: 0 25rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.title-input {
+  width: 50%;
+}
+
+.title-word-counter-text {
+  font-size: 0.9rem;
+  color: #999999;
+}
+
 .bottom-btn {
   width: 100%;
   height: 100rpx;

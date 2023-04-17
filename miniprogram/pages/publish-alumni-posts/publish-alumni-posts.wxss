@@ -43,6 +43,29 @@
   color: #999999;
 }
 
+.textarea-container {
+  margin-top: 10rpx;
+  padding: 15rpx 25rpx;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.textarea {
+  height: 200rpx;
+}
+
+.textarea-control {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 30rpx;
+}
+
+.textarea-icon {
+  width: 30rpx;
+  margin-right: 40rpx;
+}
+
 .bottom-btn {
   width: 100%;
   height: 100rpx;

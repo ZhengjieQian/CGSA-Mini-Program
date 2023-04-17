@@ -5,8 +5,16 @@
     <image class="topic-icon" src="{{forwardArrow}}" mode="aspectFit"></image>
   </view>
   <view class="title-container">
-    <input type="text" class="title-input" placeholder="标题（2-22字之间哦）" />
+    <input type="text" class="title-input" placeholder="标题（2~22字之间哦）" />
     <text class="title-word-counter-text">0/22</text>
+  </view>
+  <view class="textarea-container">
+    <textarea class="textarea" placeholder="请输入校友说内容" />
+    <view class="textarea-control">
+      <image class="textarea-icon" src="{{upArrow}}" mode="widthFix"></image>
+      <image class="textarea-icon" src="{{downArrow}}" mode="widthFix"></image>
+      <image class="textarea-icon" src="{{crossArrow}}" mode="widthFix"></image>
+    </view>
   </view>
 </view>
 <view class="bottom-btn" bindtap="postBtnTapped">

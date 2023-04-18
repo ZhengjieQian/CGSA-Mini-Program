@@ -8,7 +8,9 @@ Page({
     forwardArrow: '../../images/publish-alumni-posts/forward_arrow.jpg',
     upArrow: '../../images/publish-alumni-posts/up_arrow.jpg',
     downArrow: '../../images/publish-alumni-posts/down_arrow.jpg',
-    crossArrow: '../../images/publish-alumni-posts/cross_arrow.jpg'
+    crossArrow: '../../images/publish-alumni-posts/cross_arrow.jpg',
+    textIcon: '../../images/publish-alumni-posts/text_icon.jpg',
+    imageIcon: '../../images/publish-alumni-posts/image_icon.jpg'
   },
   topicTapped() {
     console.log('选择话题');

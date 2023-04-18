@@ -66,6 +66,30 @@
   margin-right: 40rpx;
 }
 
+.add-container {
+  height: 200rpx;
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.add-border {
+  width: 45%;
+  height: 150rpx;
+  border-radius: 0.35rem;
+  box-shadow: 0 0 2px 2px #eefcfe;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.add-image {
+  width: 70rpx;
+  height: 70rpx;
+}
+
 .bottom-btn {
   width: 100%;
   height: 100rpx;

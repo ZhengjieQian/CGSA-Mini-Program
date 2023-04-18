@@ -16,6 +16,13 @@
       <image class="textarea-icon" src="{{crossArrow}}" mode="widthFix"></image>
     </view>
   </view>
+  <view class="add-container">
+    <view class="add-border">
+      <text>添加</text>
+      <image class="add-image" src="{{textIcon}}"></image>
+      <image class="add-image" src="{{imageIcon}}"></image>
+    </view>
+  </view>
 </view>
 <view class="bottom-btn" bindtap="postBtnTapped">
   <text class="bottom-btn-text">发布</text>

@@ -25,7 +25,8 @@
     "pages/bind-promo-card/bind-promo-card",
     "pages/publish-alumni-posts/publish-alumni-posts",
     "pages/publish-second-hand/publish-second-hand",
-    "pages/publish-housing-info/publish-housing-info"
+    "pages/publish-housing-info/publish-housing-info",
+    "pages/topic-selection/topic-selection"
   ],
   "window": {
     "backgroundColor": "#FFFFFF",

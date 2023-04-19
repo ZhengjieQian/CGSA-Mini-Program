@@ -13,7 +13,15 @@ Page({
     imageIcon: '../../images/publish-alumni-posts/image_icon.jpg'
   },
   topicTapped() {
-    console.log('选择话题');
+    wx.navigateTo({
+      url: '../../pages/topic-selection/topic-selection',
+    })
+  },
+  addText() {
+    console.log('增加文本');
+  },
+  addImage() {
+    console.log('增加图片');
   },
   postBtnTapped() {
     console.log('发布');

@@ -19,8 +19,8 @@
   <view class="add-container">
     <view class="add-border">
       <text>添加</text>
-      <image class="add-image" src="{{textIcon}}"></image>
-      <image class="add-image" src="{{imageIcon}}"></image>
+      <image class="add-image" src="{{textIcon}}" bindtap="addText"></image>
+      <image class="add-image" src="{{imageIcon}}" bindtap="addImage"></image>
     </view>
   </view>
 </view>

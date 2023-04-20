@@ -1,2 +1,13 @@
-<!--pages/topic-selection/topic-selection.wxml-->
-<text>pages/topic-selection/topic-selection.wxml</text>
+<!-- pages/topic-selection/topic-selection.wxml -->
+<view class="container">
+  <view class="search-container">
+    <view class="search-box">
+      <image class="search-image" src="{{searchIcon}}" mode="widthFix"></image>
+      <input class="search-input" type="text" placeholder="输入关键词搜索话题" />
+      <image class="search-image" src="{{cancelIcon}}" mode="widthFix"></image>
+    </view>
+    <view class="search-cancel" bindtap="cancelSearch">
+      <text>取消</text>
+    </view>
+  </view>
+</view>

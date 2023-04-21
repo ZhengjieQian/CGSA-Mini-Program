@@ -10,4 +10,17 @@
       <text>取消</text>
     </view>
   </view>
+  <view class="topics-container">
+    <view class="topics-header">
+      <text class="topics-header-text">热门话题</text>
+    </view>
+    <view class="topics-content">
+      <block wx:for="{{topics}}" wx:key="*this">
+        <view class="topic-row" data-topic-index="{{index}}" bindtap="topicSelected">
+          <text class="topic-text-red">#</text>
+          <text class="topic-text">{{item}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
 </view>

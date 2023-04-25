@@ -5,6 +5,22 @@
       <image class="add-image-image" src="{{addImage}}"></image>
     </view>
   </view>
+  <view class="content-container">
+    <view class="content-title-container">
+      <input class="content-title-input" type="text"
+        placeholder="标题 请填写宝贝名称、型号等，方便买家搜索"
+        placeholder-class="placeholder-color" />
+      <text class="content-title-count placeholder-color">0/22</text>
+    </view>
+    <view class="content-info-container">
+      <textarea class="content-info-textarea"
+        placeholder="请输入商品内容信息" placeholder-class="placeholder-color" />
+    </view>
+    <view class="content-checkbox-container">
+      <checkbox value="1" checked="{{false}}" />
+      <text>全新</text>
+    </view>
+  </view>
 </view>
 <view class="bottom-btn" bindtap="postBtnTapped">
   <text class="bottom-btn-text">发布</text>

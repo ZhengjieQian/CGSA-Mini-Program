@@ -98,6 +98,32 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
   -webkit-transform: translate(-50%, -50%) scale(1);
 }
 
+.detail-container {
+  margin-top: 25rpx;
+  padding-left: 25rpx;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.detail-row {
+  height: 100rpx;
+  padding-right: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.detail-placeholder-text {
+  font-size: 0.95rem;
+  margin-right: 10rpx;
+}
+
+.detail-image {
+  width: 12rpx;
+}
+
 .bottom-btn {
   width: 100%;
   height: 100rpx;

@@ -1,6 +1,10 @@
 <!-- pages/publish-housing-info/publish-housing-info.wxml -->
 <view class="container">
-
+  <view class="add-image-container">
+    <view class="add-image-border" bindtap="addImage">
+      <image class="add-image-image" src="{{addImage}}"></image>
+    </view>
+  </view>
 </view>
 <view class="bottom-btn" bindtap="postBtnTapped">
   <text class="bottom-btn-text">发布</text>

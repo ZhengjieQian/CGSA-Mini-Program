@@ -17,6 +17,29 @@
         placeholder="描述出租房屋详情，如户型、地点等" placeholder-class="placeholder-color" />
     </view>
   </view>
+  <view class="detail-container">
+    <view class="detail-row">
+      <text>价格</text>
+      <view bindtap="inputPrice">
+        <text class="detail-placeholder-text placeholder-color">请填写价格</text>
+        <image class="detail-image" src="{{forwardArrow}}" mode="widthFix"></image>
+      </view>
+    </view>
+    <view class="detail-row">
+      <text>房源信息</text>
+      <view bindtap="selectSource">
+        <text class="detail-placeholder-text placeholder-color">请填写房源信息</text>
+        <image class="detail-image" src="{{forwardArrow}}" mode="widthFix"></image>
+      </view>
+    </view>
+    <view class="detail-row">
+      <text>联系方式</text>
+      <view bindtap="inputContactInfo">
+        <text class="detail-placeholder-text placeholder-color">请填写联系方式</text>
+        <image class="detail-image" src="{{forwardArrow}}" mode="widthFix"></image>
+      </view>
+    </view>
+  </view>
 </view>
 <view class="bottom-btn" bindtap="postBtnTapped">
   <text class="bottom-btn-text">发布</text>

@@ -19,5 +19,8 @@ Page({
   },
   inputContactInfo() {
     console.log('输入联系方式');
+  },
+  postBtnTapped() {
+    console.log('发布');
   }
 })

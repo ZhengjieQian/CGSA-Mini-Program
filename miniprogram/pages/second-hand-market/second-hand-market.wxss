@@ -1,1 +1,33 @@
 /* pages/second-hand-market/second-hand-market.wxss */
+.container {
+  width: 100%;
+}
+
+.search-bar-container {
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.search-bar {
+  width: 50%;
+  height: 50%;
+  padding: 10rpx 20rpx;
+  display: flex;
+  align-items: center;
+  background-color: #f4f4f4;
+  border-radius: 1rem;
+}
+
+.search-bar-image {
+  width: 25rpx;
+  height: 25rpx;
+  padding: 0 10rpx;
+}
+
+.search-bar-input {
+  margin: 0 10rpx;
+}

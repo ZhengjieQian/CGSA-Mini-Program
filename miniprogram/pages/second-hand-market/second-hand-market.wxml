@@ -1,2 +1,9 @@
-<!--pages/second-hand-market/second-hand-market.wxml-->
-<text>二手市场</text>
+<!-- pages/second-hand-market/second-hand-market.wxml -->
+<view class="container">
+  <view class="search-bar-container">
+    <view class="search-bar">
+      <image class="search-bar-image" src="{{searchIcon}}" mode="widthFix"></image>
+      <input class="search-bar-input" type="text" placeholder="搜索二手商品" />
+    </view>
+  </view>
+</view>

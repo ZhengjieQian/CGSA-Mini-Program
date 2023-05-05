@@ -57,3 +57,36 @@
   margin-left: 10rpx;
   width: 15rpx;
 }
+
+.tag-selector-container {
+  height: 100rpx;
+  padding-left: 20rpx;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.tag-selector-scroller {
+  white-space: nowrap;
+}
+
+.tag-item {
+  margin-left: 20rpx;
+  padding: 10rpx 20rpx;
+  display: inline-block;
+  background-color: #f2f2f2;
+  border-radius: 0.2rem;
+}
+
+.tag-item-active {
+  background-color: #da251a;
+}
+
+.tag-item-text {
+  font-size: 0.95rem;
+  color: #999999;
+}
+
+.tag-item-text-active {
+  color: #ffffff;
+}

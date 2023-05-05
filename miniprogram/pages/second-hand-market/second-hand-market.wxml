@@ -6,4 +6,18 @@
       <input class="search-bar-input" type="text" placeholder="搜索二手商品" />
     </view>
   </view>
+  <view class="filter-container">
+    <view class="filter-item-container">
+      <text class="filter-item-text">综合排序</text>
+      <image class="filter-item-image" src="{{filterItemIcon}}" mode="widthFix"></image>
+    </view>
+    <view class="filter-item-container">
+      <text class="filter-item-text">价格</text>
+      <image class="filter-item-image" src="{{filterItemIcon}}" mode="widthFix"></image>
+    </view>
+    <view class="filter-item-container">
+      <text class="filter-item-text">不限</text>
+      <image class="filter-item-image" src="{{filterItemIcon}}" mode="widthFix"></image>
+    </view>
+  </view>
 </view>

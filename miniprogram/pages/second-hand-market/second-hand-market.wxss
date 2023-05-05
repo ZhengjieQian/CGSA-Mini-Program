@@ -31,3 +31,29 @@
 .search-bar-input {
   margin: 0 10rpx;
 }
+
+.filter-container {
+  height: 80rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.filter-item-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-item-text {
+  font-size: 0.95rem;
+  color: #999999;
+}
+
+.filter-item-image {
+  margin-left: 10rpx;
+  width: 15rpx;
+}

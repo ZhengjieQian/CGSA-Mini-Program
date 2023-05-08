@@ -30,4 +30,11 @@
       </block>
     </scroll-view>
   </view>
+  <view class="content-container">
+    <block wx:for="{{products}}" wx:key="title">
+      <view class="product-container">
+        
+      </view>
+    </block>
+  </view>
 </view>

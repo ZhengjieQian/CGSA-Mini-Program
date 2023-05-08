@@ -90,3 +90,19 @@
 .tag-item-text-active {
   color: #ffffff;
 }
+
+.content-container {
+  padding: 0 10rpx;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.product-container {
+  width: 46%;
+  height: 520rpx;
+  margin: 15rpx 15rpx;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}

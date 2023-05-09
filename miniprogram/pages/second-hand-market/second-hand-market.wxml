@@ -33,7 +33,22 @@
   <view class="content-container">
     <block wx:for="{{products}}" wx:key="title">
       <view class="product-container">
-        
+        <image class="product-image" src="{{item.image}}" mode="widthFix"></image>
+        <text class="product-title">{{item.title}}</text>
+        <view class="product-subtitle">
+          <view class="subtitle-price">
+            <text class="subtitle-price-dollar">$</text>
+            <text class="subtitle-price-number">{{item.price}}</text>
+          </view>
+          <text class="subtitle-views">{{item.views}}浏览量</text>
+        </view>
+        <view class="product-userinfo">
+          <image class="userinfo-avatar" src="{{item.avatar}}" mode="widthFix"></image>
+          <view class="userinfo-detail">
+            <text class="userinfo-detail-text">{{item.username}}</text>
+            <text class="userinfo-detail-text">{{item.location}} | {{item.date}}</text>
+          </view>
+        </view>
       </view>
     </block>
   </view>

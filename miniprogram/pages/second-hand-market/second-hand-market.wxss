@@ -99,10 +99,85 @@
 }
 
 .product-container {
-  width: 46%;
+  width: 45%;
   height: 520rpx;
-  margin: 15rpx 15rpx;
+  margin: 10rpx 0rpx;
+  padding: 5rpx 10rpx;
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 15rpx -5rpx #e9e9e9;
+}
+
+.product-image {
+  flex: 10;
+  width: 100%;
+}
+
+.product-title {
+  flex: 1;
+  padding: 0 10rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.product-subtitle {
+  flex: 1;
+  padding: 0 10rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subtitle-price {
+  display: flex;
+  align-items: baseline;
+}
+
+.subtitle-price-dollar {
+  color: #e63d3e;
+  font-weight: bold;
+  font-size: 0.75rem;
+  font-family: 'Times New Roman', Times, sans-serif;
+}
+
+.subtitle-price-number {
+  color: #e63d3e;
+  font-weight: bold;
+  font-size: 1.25rem;
+  font-family: 'Times New Roman', Times, sans-serif;
+}
+
+.subtitle-views {
+  color: #b3b3b3;
+  font-size: 0.7rem;
+  font-family: 'Times New Roman', Times, sans-serif;
+}
+
+.product-userinfo {
+  flex: 2;
+  padding: 0 10rpx;
+  display: flex;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.userinfo-detail {
+  margin-left: 10rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.userinfo-detail-text {
+  font-size: 0.7rem;
+  color: #999999;
+  font-family: 'Times New Roman', Times, sans-serif;
 }

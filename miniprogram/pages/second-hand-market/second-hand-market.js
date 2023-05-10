@@ -3,6 +3,7 @@
 Page({
   data: {
     searchIcon: '../../images/second-hand-market/search_icon.jpg',
+    searchBarKeyword: '',
     filterItemIcon: '../../images/second-hand-market/filter_item_icon.jpg',
     tags: ['全部', '电子产品', '交通工具', '家具家电', '厨房用品', '学习资料'],
     activeTagIndex: 0,
@@ -17,7 +18,7 @@ Page({
       date: '04-26'
     }, {
       image: '../../images/second-hand-market/product_1.jpg',
-      title: '红色 高颜值自行车 骨折随缘出',
+      title: '红色 高颜值自行车 骨折随缘出2',
       price: '60',
       views: '72',
       avatar: '../../images/second-hand-market/product_1_avatar.jpg',
@@ -26,7 +27,7 @@ Page({
       date: '04-26'
     }, {
       image: '../../images/second-hand-market/product_1.jpg',
-      title: '红色 高颜值自行车 骨折随缘出',
+      title: '红色 高颜值自行车 骨折随缘出3',
       price: '60',
       views: '72',
       avatar: '../../images/second-hand-market/product_1_avatar.jpg',
@@ -35,7 +36,7 @@ Page({
       date: '04-26'
     }, {
       image: '../../images/second-hand-market/product_1.jpg',
-      title: '红色 高颜值自行车 骨折随缘出',
+      title: '红色 高颜值自行车 骨折随缘出4',
       price: '60',
       views: '72',
       avatar: '../../images/second-hand-market/product_1_avatar.jpg',
@@ -44,7 +45,7 @@ Page({
       date: '04-26'
     }, {
       image: '../../images/second-hand-market/product_1.jpg',
-      title: '红色 高颜值自行车 骨折随缘出',
+      title: '红色 高颜值自行车 骨折随缘出5',
       price: '60',
       views: '72',
       avatar: '../../images/second-hand-market/product_1_avatar.jpg',
@@ -53,7 +54,7 @@ Page({
       date: '04-26'
     }, {
       image: '../../images/second-hand-market/product_1.jpg',
-      title: '红色 高颜值自行车 骨折随缘出',
+      title: '红色 高颜值自行车 骨折随缘出6',
       price: '60',
       views: '72',
       avatar: '../../images/second-hand-market/product_1_avatar.jpg',
@@ -61,6 +62,14 @@ Page({
       location: 'Los Angeles',
       date: '04-26'
     }]
+  },
+  searchBtnTapped() {
+    console.log('搜索' + this.data.searchBarKeyword);
+  },
+  searchInput(e) {
+    this.setData({
+      searchBarKeyword: e.detail.value
+    });
   },
   changeTag(e) {
     this.setData({

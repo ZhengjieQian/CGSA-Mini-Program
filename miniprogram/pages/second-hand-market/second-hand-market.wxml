@@ -34,7 +34,7 @@
   </view>
   <view class="content-container">
     <block wx:for="{{products}}" wx:key="title">
-      <view class="product-container">
+      <view class="product-container" data-product-index="{{index}}" bindtap="productTapped">
         <image class="product-image" src="{{item.image}}" mode="widthFix"></image>
         <text class="product-title">{{item.title}}</text>
         <view class="product-subtitle">

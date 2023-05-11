@@ -75,5 +75,11 @@ Page({
     this.setData({
       activeTagIndex: e.currentTarget.dataset.currentIndex
     });
+  },
+  productTapped(e) {
+    console.log('打开商品页' + e.currentTarget.dataset.productIndex);
+    wx.navigateTo({
+      url: '../../pages/second-hand-market-detail/second-hand-market-detail',
+    })
   }
 });

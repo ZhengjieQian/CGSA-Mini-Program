@@ -26,7 +26,8 @@
     "pages/publish-alumni-posts/publish-alumni-posts",
     "pages/publish-second-hand/publish-second-hand",
     "pages/publish-housing-info/publish-housing-info",
-    "pages/topic-selection/topic-selection"
+    "pages/topic-selection/topic-selection",
+    "pages/second-hand-market-detail/second-hand-market-detail"
   ],
   "window": {
     "backgroundColor": "#FFFFFF",

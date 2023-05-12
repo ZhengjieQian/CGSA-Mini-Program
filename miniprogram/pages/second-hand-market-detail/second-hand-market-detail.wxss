@@ -1,1 +1,4 @@
 /* pages/second-hand-market-detail/second-hand-market-detail.wxss */
+.container {
+  
+}

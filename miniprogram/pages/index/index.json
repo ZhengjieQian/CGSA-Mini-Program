@@ -1,8 +1,3 @@
 {
-  "usingComponents": {
-    "index-swiper": "../../components/index-swiper/index-swiper",
-    "index-button-panel": "../../components/index-button-panel/index-button-panel",
-    "index-button-row": "../../components/index-button-row/index-button-row",
-    "index-posts": "../../components/index-posts/index-posts"
-  }
+  "usingComponents": {}
 }

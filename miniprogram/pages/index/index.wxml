@@ -1,10 +1,69 @@
-<!-- pages/index/index.wxml -->
 <view class="container">
-  <view class="swiper-container"><index-swiper></index-swiper></view>
-  <view class="content-container">
-    <view class="button-panel-container"><index-button-panel></index-button-panel></view>
-    <view class="button-row-container"><index-button-row></index-button-row></view>
-    <view class="text-row-container"><text class="text">校园动态</text></view>
-    <view class="posts-container"><index-posts></index-posts></view>
-  </view>
+	<view class="swiper-container">
+		<swiper
+		 class="swiper"
+		 indicator-dots="true"
+		 autoplay="true"
+		 interval="5000"
+		 duration="1300"
+		>
+			<block wx:for="{{swiperImages}}" wx:for-item="item" wx:key="index">
+				<swiper-item>
+					<image class="swiper-image" src="{{item}}" mode="widthFix" />
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+	<view class="content-container">
+		<view class="button-panel-container">
+			<view class="panel-row">
+				<block wx:for="{{row1Buttons}}" wx:for-item="item" wx:key="index">
+					<view class="panel-button" data-link="{{item.link}}" bindtap="navigate">
+						<image class="panel-image" src="{{item.image}}" />
+						<text class="panel-text">{{item.title}}</text>
+					</view>
+				</block>
+			</view>
+			<view class="blank-between-panel-row" />
+			<view class="panel-row">
+				<block wx:for="{{row2Buttons}}" wx:for-item="item" wx:key="index">
+					<view class="panel-button" data-link="{{item.link}}" bindtap="navigate">
+						<image class="panel-image" src="{{item.image}}" />
+						<text class="panel-text">{{item.title}}</text>
+					</view>
+				</block>
+			</view>
+		</view>
+		<view class="button-row-container">
+			<block wx:for="{{row3Buttons}}" wx:for-item="item" wx:key="index">
+				<view class="button-row-button" data-link="{{item.link}}" bindtap="navigate">
+					<view class="button-row-text">
+						<text class="button-row-title">{{item.title}}</text>
+						<text class="button-row-subtitle">{{item.subtitle}}</text>
+					</view>
+					<view>
+						<image class="button-row-image" src="{{item.image}}" />
+					</view>
+				</view>
+			</block>
+		</view>
+		<view class="text-row-container">
+			<text class="text-row-text">校园动态</text>
+		</view>
+		<view class="posts-container">
+			<block wx:for="{{posts}}" wx:for-item="item" wx:key="index">
+				<view class="post-container">
+					<view class="post-image-container">
+						<image class="post-image" src="{{item.image}}" mode="aspectFill" />
+					</view>
+					<view class="post-blank-space" />
+					<view class="post-text-container">
+						<text class="post-title">{{item.title}}</text>
+						<text class="post-date">{{item.date}}</text>
+					</view>
+				</view>
+			</block>
+		</view>
+	</view>
 </view>
+

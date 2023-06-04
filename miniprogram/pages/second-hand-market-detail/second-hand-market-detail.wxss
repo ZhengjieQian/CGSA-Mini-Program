@@ -1,4 +1,363 @@
-/* pages/second-hand-market-detail/second-hand-market-detail.wxss */
+/* pages/second-hand-market-detail/second-hand-market-detail.css */
 .container {
-  
+	width: 100%;
+	padding-bottom: 125rpx;
+	display: flex;
+	flex-direction: column;
+}
+.swiper-container {
+	width: 100%;
+	position: relative;
+}
+.swiper {
+	width: 100%;
+	height: 600rpx;
+}
+.swiper-image {
+	width: 100%;
+	height: 100%;
+}
+.swiper-indicator {
+	width: 100rpx;
+	height: 50rpx;
+	position: absolute;
+	right: 30rpx;
+	bottom: 30rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #7f7f7f;
+	border-radius: 1rem;
+}
+.swiper-indicator-text {
+	color: #ffffff;
+	font-family: 'Times New Roman', Times, serif;
+}
+.intro-container {
+	margin-top: -10rpx;
+	padding: 30rpx;
+	display: flex;
+	flex-direction: column;
+	border-top-left-radius: 1.2rem;
+	border-top-right-radius: 1.2rem;
+	background-color: #ffffff;
+	z-index: 99;
+}
+.intro-headline {
+	display: flex;
+	align-items: center;
+}
+.intro-headline-condition {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #da251a;
+	border-radius: 0.15rem;
+}
+.intro-headline-condition-text {
+	padding: 6rpx 10rpx;
+	font-size: 0.7rem;
+	font-weight: bold;
+	color: #ffffff;
+}
+.intro-headline-title {
+	margin-left: 20rpx;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+.intro-price {
+	padding: 10rpx 0;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 1.5rem;
+	color: #da251a;
+}
+.description-container {
+	margin-top: 20rpx;
+	padding: 30rpx;
+	display: flex;
+	flex-direction: column;
+	background-color: #ffffff;
+}
+.description-headline {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.description-headline-title {
+	font-size: 1.05rem;
+	font-weight: bold;
+}
+.description-headline-views {
+	font-size: 0.95rem;
+	font-family: 'Times New Roman', Times, sans-serif;
+	color: #999999;
+}
+.description-content {
+	margin-top: 20rpx;
+}
+.description-content-text {
+	font-family: 'Times New Roman', Times, sans-serif;
+	font-size: 0.95rem;
+	position: relative;
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+.description-content-topic {
+	margin-right: 20rpx;
+	color: #fdc83f;
+}
+.description-content-text-showall {
+	-webkit-line-clamp: 99 !important;
+}
+.description-content-text-hidden {
+	font-family: 'Times New Roman', Times, sans-serif;
+	font-size: 0.95rem;
+	padding: 0 30rpx;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
+	visibility: hidden;
+}
+.description-showmore {
+	margin-top: 20rpx;
+	padding: 20rpx 0;
+	display: flex;
+	justify-content: center;
+	align-items: baseline;
+}
+.description-showmore-text {
+	color: #ffb62a;
+	font-size: 0.95rem;
+}
+.description-showmore-image {
+	margin-left: 10rpx;
+	width: 26rpx;
+	height: 18rpx;
+}
+.contact-info-container {
+	padding: 0 30rpx;
+	padding-bottom: 30rpx;
+	background-color: #ffffff;
+}
+.contact-info {
+	padding: 30rpx;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #ececec;
+	border-radius: 0.25rem;
+	box-shadow: 0 0rpx 10rpx 5rpx #efefef;
+}
+.contact-info-user {
+	display: flex;
+	align-items: center;
+}
+.contact-info-user-image {
+	width: 60rpx;
+	height: 60rpx;
+}
+.contact-info-user-detail {
+	margin-left: 10rpx;
+	display: flex;
+	flex-direction: column;
+}
+.contact-info-user-name {
+	color: #666666;
+	font-size: 0.95rem;
+	font-family: 'Times New Roman', Times, sans-serif;
+}
+.contact-info-user-date {
+	color: #999999;
+	font-size: 0.8rem;
+	font-family: 'Times New Roman', Times, sans-serif;
+}
+.contact-info-row {
+	margin-left: 30rpx;
+	margin-top: 15rpx;
+	padding: 10rpx 30rpx;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.contact-info-row-item {
+	font-size: 0.95rem;
+	font-family: 'Times New Roman', Times, sans-serif;
+}
+.contact-info-row-action {
+	color: #ffb629;
+	font-size: 0.9rem;
+	font-family: 'Times New Roman', Times, sans-serif;
+}
+.comment-title-container {
+	padding: 30rpx 30rpx;
+	display: flex;
+	align-items: baseline;
+	background-color: #ffffff;
+}
+.comment-title {
+	font-weight: bold;
+	font-size: 1.05rem;
+}
+.comment-title-number {
+	margin-left: 8rpx;
+	color: #999999;
+	font-size: 0.8rem;
+	font-weight: bold;
+	font-family: 'Times New Roman', Times, sans-serif;
+}
+.comment-user-container {
+	padding: 30rpx;
+	display: flex;
+	align-items: center;
+	background-color: #ffffff;
+}
+.comment-user-avatar {
+	width: 65rpx;
+	height: 65rpx;
+}
+.comment-user-textbox {
+	width: 80%;
+	margin-left: 20rpx;
+	padding: 18rpx 30rpx;
+	border-radius: 1.25rem;
+	background-color: #f2f2f2;
+}
+.comment-user-textbox-text {
+	color: #999999;
+}
+.comment-list-container {
+	padding-left: 30rpx;
+	padding-right: 40rpx;
+	display: flex;
+	flex-direction: column;
+	background-color: #ffffff;
+}
+.comment-item {
+	padding: 15rpx 0;
+	display: flex;
+	justify-content: space-between;
+}
+.comment-item-avatar-container {
+	display: flex;
+	flex-direction: column;
+}
+.comment-item-avatar {
+	width: 65rpx;
+	height: 65rpx;
+}
+.comment-item-detail-container {
+	width: 88%;
+	display: flex;
+	flex-direction: column;
+}
+.comment-item-detail-user {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+.comment-item-detail-user-name-date {
+	display: flex;
+	flex-direction: column;
+}
+.comment-item-detail-user-username {
+	font-size: 1.05rem;
+	font-family: 'Times New Roman', Times, sans-serif;
+}
+.comment-item-detail-user-date {
+	font-size: 0.8rem;
+	font-family: 'Times New Roman', Times, sans-serif;
+	color: #919191;
+}
+.comment-item-detail-user-like-comment {
+	margin-bottom: 8rpx;
+	display: flex;
+}
+.comment-item-detail-like-image {
+	width: 30rpx;
+	height: 30rpx;
+}
+.comment-item-detail-like-text {
+	margin-left: 1rpx;
+	font-size: 0.8rem;
+	color: #979797;
+	font-family: 'Times New Roman', Times, sans-serif;
+}
+.comment-item-detail-comment-image {
+	margin-left: 15rpx;
+	width: 30rpx;
+	height: 30rpx;
+}
+.comment-item-detail-comment {
+	margin-top: 5rpx;
+	padding-bottom: 20rpx;
+	border-bottom: 1px solid #d9d9d9;
+}
+.comment-item-detail-comment-text {
+	font-family: 'Times New Roman', Times, sans-serif;
+}
+.footer {
+	width: 100%;
+	height: 125rpx;
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	background-color: #ffffff;
+	z-index: 99;
+}
+.footer-blank {
+	flex: 1;
+}
+.footer-content {
+	flex: 30;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.footer-left {
+	display: flex;
+	align-items: center;
+}
+.share {
+	margin-left: 20rpx;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.like {
+	margin-left: 50rpx;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.share-image {
+	width: 35rpx;
+	height: 35rpx;
+}
+.like-image {
+	width: 37rpx;
+	height: 37rpx;
+}
+.share-text, .like-text {
+	margin-top: 8rpx;
+	color: #999999;
+	font-size: 0.75rem;
+}
+.footer-right {
+}
+.footer-chat {
+	width: 200rpx;
+	height: 72rpx;
+	background-color: #da251a;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0.25rem;
+}
+.footer-chat-text {
+	color: #ffffff;
 }

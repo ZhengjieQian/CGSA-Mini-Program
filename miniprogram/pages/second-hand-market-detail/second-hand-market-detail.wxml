@@ -1,4 +1,130 @@
-<!-- pages/second-hand-market-detail/second-hand-market-detail.wxml -->
+<!-- pages/second-hand-market-detail/second-hand-market.wxml -->
 <view class="container">
-  
+	<view class="swiper-container">
+		<swiper
+		 class="swiper"
+		 autoplay="true"
+		 interval="5000"
+		 duration="1300"
+		>
+			<block wx:for="{{swiperImages}}" wx:for-item="image" wx:key="*this">
+				<swiper-item>
+					<image class="swiper-image" src="{{image}}" mode="aspectFill" />
+				</swiper-item>
+			</block>
+		</swiper>
+		<view class="swiper-indicator">
+			<text class="swiper-indicator-text">1/1</text>
+		</view>
+	</view>
+	<view class="intro-container">
+		<view class="intro-headline">
+			<view class="intro-headline-condition">
+				<text class="intro-headline-condition-text">非全新</text>
+			</view>
+			<text class="intro-headline-title">红色 高颜值自行车 骨折随缘出</text>
+		</view>
+		<text class="intro-price">$60.00</text>
+	</view>
+	<view class="description-container">
+		<view class="description-headline">
+			<text class="description-headline-title">描述</text>
+			<text class="description-headline-views">浏览93</text>
+		</view>
+		<view class="description-content">
+			<text class="{{['description-content-text', !descCollapseStatus && 'description-content-text-showall']}}">
+				<text class="description-content-topic">#电子产品</text>
+			出平底锅，99新皮卡斤伊布限定switch+游戏若干
+			塞尔达,动森,舞力全开，去皮去伊，任亏券一个可兑换任意游戏，精灵球plus，索尼wi1000x无线耳机，出99新new
+			3ds 11，所有物品包装配配件产全
+			</text>
+			<view class="description-content-text-hidden">
+				<text class="description-content-topic">#电子产品</text>
+				出平底锅，99新皮卡斤伊布限定switch+游戏若干
+				塞尔达,动森,舞力全开，去皮去伊，任亏券一个可兑换任意游戏，精灵球plus，索尼wi1000x无线耳机，出99新new
+				3ds 11，所有物品包装配配件产全
+			</view>
+		</view>
+		<view wx:if="{{descOverflowStatus}}" class="description-showmore" bindtap="showMoreTapped">
+			<text wx:if="{{descCollapseStatus}}" class="description-showmore-text">展开信息</text>
+			<text wx:if="{{!descCollapseStatus}}" class="description-showmore-text">收起信息</text>
+			<image class="description-showmore-image" src="{{descCollapseStatus ? showMoreImage : showLessImage}}" />
+		</view>
+	</view>
+	<view class="contact-info-container">
+		<view class="contact-info">
+			<view class="contact-info-user">
+				<image class="contact-info-user-image" src="{{userAvatarImage}}" />
+				<view class="contact-info-user-detail">
+					<text class="contact-info-user-name">南风知我意Hase</text>
+					<text class="contact-info-user-date">12-13发布</text>
+				</view>
+			</view>
+			<view class="contact-info-row">
+				<text class="contact-info-row-item">电话: 6178933701</text>
+				<text class="contact-info-row-action">拨打</text>
+			</view>
+			<view class="contact-info-row">
+				<text class="contact-info-row-item">微信: 596847824tulpe</text>
+				<text class="contact-info-row-action">复制</text>
+			</view>
+		</view>
+	</view>
+	<view class="comment-title-container">
+		<text class="comment-title">留言</text>
+		<text class="comment-title-number">({{commentList.length}})</text>
+	</view>
+	<view class="comment-user-container">
+		<image class="comment-user-avatar" src="{{userAvatarImage}}" />
+		<view class="comment-user-textbox" bindtap="commentTextBoxTapped">
+			<text class="comment-user-textbox-text">留言，问问更多细节</text>
+		</view>
+	</view>
+	<view class="comment-list-container">
+		<block wx:for="{{commentList}}" wx:for-item="item" wx:key="index">
+			<view class="comment-item">
+				<view class="comment-item-avatar-container">
+					<image class="comment-item-avatar" src="{{item.avatar}}" />
+				</view>
+				<view class="comment-item-detail-container">
+					<view class="comment-item-detail-user">
+						<view class="comment-item-detail-user-name-date">
+							<text class="comment-item-detail-user-username">{{item.username}}</text>
+							<text class="comment-item-detail-user-date">{{item.date}}</text>
+						</view>
+						<view class="comment-item-detail-user-like-comment">
+							<image class="comment-item-detail-like-image" src="{{likeImage}}" />
+							<text class="comment-item-detail-like-text">{{item.likes}}</text>
+							<image class="comment-item-detail-comment-image" src="{{commentImage}}" />
+						</view>
+					</view>
+					<view class="comment-item-detail-comment">
+						<text class="comment-item-detail-comment-text">{{item.text}}</text>
+					</view>
+				</view>
+			</view>
+		</block>
+	</view>
 </view>
+<view class="footer">
+	<view class="footer-blank" />
+	<view class="footer-content">
+		<view class="footer-left">
+			<view class="share" bindtap="shareBtnTapped">
+				<image class="share-image" src="{{shareImage}}" />
+				<text class="share-text">分享</text>
+			</view>
+			<view class="like" bindtap="likeBtnTapped">
+				<image class="like-image" src="{{liked ? likedImage : likeImage}}" />
+				<text class="like-text">点赞</text>
+			</view>
+		</view>
+		<view class="footer-right">
+			<view class="footer-chat" bindtap="chatBtnTapped">
+				<text class="footer-chat-text">聊一聊</text>
+			</view>
+		</view>
+	</view>
+	<view class="footer-blank" />
+</view>
+

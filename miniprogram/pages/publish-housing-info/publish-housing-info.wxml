@@ -1,21 +1,23 @@
 <!-- pages/publish-housing-info/publish-housing-info.wxml -->
 <view class="container">
-  <view class="add-image-container">
-    <view class="add-image-border" bindtap="addImage">
-      <image class="add-image-image" src="{{addImage}}"></image>
-    </view>
-  </view>
-  <view class="content-container">
-    <view class="content-title-container">
-      <input class="content-title-input" type="text"
-        placeholder="请填写房屋信息"
-        placeholder-class="placeholder-color" />
-      <text class="content-title-count placeholder-color">0/22</text>
-    </view>
-    <view class="content-info-container">
-      <textarea class="content-info-textarea"
-        placeholder="描述出租房屋详情，如户型、地点等" placeholder-class="placeholder-color" />
-    </view>
+	<view class="add-image-container">
+		<view class="add-image-border" bindtap="addImage">
+			<image class="add-image-image" src="{{addImage}}" />
+		</view>
+	</view>
+	<view class="content-container">
+		<view class="content-title-container">
+			<input
+			 class="content-title-input"
+			 type="text"
+			 placeholder="请填写房屋信息"
+			 placeholder-class="placeholder-color"
+			/>
+			<text class="content-title-count placeholder-color">0/22</text>
+		</view>
+		<view class="content-info-container">
+			<textarea class="content-info-textarea" placeholder="描述出租房屋详情，如户型、地点等" placeholder-class="placeholder-color" />
+			</view>
   </view>
   <view class="detail-container">
     <view class="detail-row">
@@ -44,3 +46,4 @@
 <view class="bottom-btn" bindtap="postBtnTapped">
   <text class="bottom-btn-text">发布</text>
 </view>
+

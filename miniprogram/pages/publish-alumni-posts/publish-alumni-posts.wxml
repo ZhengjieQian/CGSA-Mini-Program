@@ -1,16 +1,16 @@
 <!-- pages/publish-alumni-posts/publish-alumni-posts.wxml -->
 <view class="container">
-  <view class="topic-container" bindtap="topicTapped">
-    <text class="topic-text"># 去定义话题</text>
-    <image class="topic-icon" src="{{forwardArrow}}" mode="aspectFit"></image>
-  </view>
-  <view class="title-container">
-    <input type="text" class="title-input" placeholder="标题（2~22字之间哦）" />
-    <text class="title-word-counter-text">0/22</text>
-  </view>
-  <view class="textarea-container">
-    <textarea class="textarea" placeholder="请输入校友说内容" />
-    <view class="textarea-control">
+	<view class="topic-container" bindtap="topicTapped">
+		<text class="topic-text"># 去定义话题</text>
+		<image class="topic-icon" src="{{forwardArrow}}" mode="aspectFit" />
+	</view>
+	<view class="title-container">
+		<input type="text" class="title-input" placeholder="标题（2~22字之间哦）" />
+		<text class="title-word-counter-text">0/22</text>
+	</view>
+	<view class="textarea-container">
+		<textarea class="textarea" placeholder="请输入校友说内容" />
+		<view class="textarea-control">
       <image class="textarea-icon" src="{{upArrow}}" mode="widthFix"></image>
       <image class="textarea-icon" src="{{downArrow}}" mode="widthFix"></image>
       <image class="textarea-icon" src="{{crossArrow}}" mode="widthFix"></image>
@@ -27,3 +27,4 @@
 <view class="bottom-btn" bindtap="postBtnTapped">
   <text class="bottom-btn-text">发布</text>
 </view>
+

@@ -1,57 +1,64 @@
 <!-- pages/second-hand-market/second-hand-market.wxml -->
 <view class="container">
-  <view class="search-bar-container">
-    <view class="search-bar">
-      <view class="search-bar-image-container" bindtap="searchBtnTapped">
-        <image class="search-bar-image" src="{{searchIcon}}" mode="widthFix"></image>
-      </view>
-      <input class="search-bar-input" type="text" placeholder="搜索二手商品" bindinput="searchInput" />
-    </view>
-  </view>
-  <view class="filter-container">
-    <view class="filter-item-container">
-      <text class="filter-item-text">综合排序</text>
-      <image class="filter-item-image" src="{{filterItemIcon}}" mode="widthFix"></image>
-    </view>
-    <view class="filter-item-container">
-      <text class="filter-item-text">价格</text>
-      <image class="filter-item-image" src="{{filterItemIcon}}" mode="widthFix"></image>
-    </view>
-    <view class="filter-item-container">
-      <text class="filter-item-text">不限</text>
-      <image class="filter-item-image" src="{{filterItemIcon}}" mode="widthFix"></image>
-    </view>
-  </view>
-  <view class="tag-selector-container">
-    <scroll-view class="tag-selector-scroller" scroll-x="true">
-      <block wx:for="{{tags}}" wx:key="*this">
-        <view class="tag-item {{activeTagIndex == index ? 'tag-item-active' : ''}}"
-          data-current-index="{{index}}" bindtap="changeTag">
-          <text class="tag-item-text {{activeTagIndex == index ? 'tag-item-text-active' : ''}}">{{item}}</text>
-        </view>
-      </block>
-    </scroll-view>
-  </view>
-  <view class="content-container">
-    <block wx:for="{{products}}" wx:key="title">
-      <view class="product-container" data-product-index="{{index}}" bindtap="productTapped">
-        <image class="product-image" src="{{item.image}}" mode="widthFix"></image>
-        <text class="product-title">{{item.title}}</text>
-        <view class="product-subtitle">
-          <view class="subtitle-price">
-            <text class="subtitle-price-dollar">$</text>
-            <text class="subtitle-price-number">{{item.price}}</text>
-          </view>
-          <text class="subtitle-views">{{item.views}}浏览量</text>
-        </view>
-        <view class="product-userinfo">
-          <image class="userinfo-avatar" src="{{item.avatar}}" mode="widthFix"></image>
-          <view class="userinfo-detail">
-            <text class="userinfo-detail-text">{{item.username}}</text>
-            <text class="userinfo-detail-text">{{item.location}} | {{item.date}}</text>
-          </view>
-        </view>
-      </view>
-    </block>
-  </view>
+	<view class="search-bar-container">
+		<view class="search-bar">
+			<view class="search-bar-image-container" bindtap="searchBtnTapped">
+				<image class="search-bar-image" src="{{searchIcon}}" mode="widthFix" />
+			</view>
+			<input
+			 class="search-bar-input"
+			 type="text"
+			 placeholder="搜索二手商品"
+			 bindinput="searchInput"
+			/>
+		</view>
+	</view>
+	<view class="filter-container">
+		<view class="filter-item-container">
+			<text class="filter-item-text">综合排序</text>
+			<image class="filter-item-image" src="{{filterItemIcon}}" mode="widthFix" />
+		</view>
+		<view class="filter-item-container">
+			<text class="filter-item-text">价格</text>
+			<image class="filter-item-image" src="{{filterItemIcon}}" mode="widthFix" />
+		</view>
+		<view class="filter-item-container">
+			<text class="filter-item-text">不限</text>
+			<image class="filter-item-image" src="{{filterItemIcon}}" mode="widthFix" />
+		</view>
+	</view>
+	<view class="tag-selector-container">
+		<scroll-view class="tag-selector-scroller" scroll-x="true">
+			<block wx:for="{{tags}}" wx:key="*this">
+				<view class="tag-item {{activeTagIndex == index ? 'tag-item-active' : ''}}" data-current-index="{{index}}" bindtap="changeTag">
+					<text class="tag-item-text {{activeTagIndex == index ? 'tag-item-text-active' : ''}}">
+						{{item}}
+					</text>
+				</view>
+			</block>
+		</scroll-view>
+	</view>
+	<view class="content-container">
+		<block wx:for="{{products}}" wx:key="title">
+			<view class="product-container" data-product-index="{{index}}" bindtap="productTapped">
+				<image class="product-image" src="{{item.image}}" mode="widthFix" />
+				<text class="product-title">{{item.title}}</text>
+				<view class="product-subtitle">
+					<view class="subtitle-price">
+						<text class="subtitle-price-dollar">$</text>
+						<text class="subtitle-price-number">{{item.price}}</text>
+					</view>
+					<text class="subtitle-views">{{item.views}}浏览量</text>
+				</view>
+				<view class="product-userinfo">
+					<image class="userinfo-avatar" src="{{item.avatar}}" mode="widthFix" />
+					<view class="userinfo-detail">
+						<text class="userinfo-detail-text">{{item.username}}</text>
+						<text class="userinfo-detail-text">{{item.location}} | {{item.date}}</text>
+					</view>
+				</view>
+			</view>
+		</block>
+	</view>
 </view>
+

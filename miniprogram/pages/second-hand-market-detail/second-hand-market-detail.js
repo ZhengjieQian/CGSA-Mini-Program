@@ -56,7 +56,7 @@ Page({
     // 用户点击展开信息或收起信息
     showMoreTapped() {
         this.setData({
-            descCollapseStatus: !this.descCollapseStatus,
+            descCollapseStatus: !this.data.descCollapseStatus
         });
     },
     // 用户点击评论框
@@ -69,9 +69,9 @@ Page({
     },
     // 用户点击点赞按钮
     likeBtnTapped() {
-        console.log("点赞");
+        console.log(this.data.liked);
         this.setData({
-            liked: !this.liked,
+            liked: !this.data.liked
         });
     },
     // 用户点击聊天按钮

@@ -1,4 +1,4 @@
-<!-- pages/second-hand-market-detail/second-hand-market.wxml -->
+<!-- pages/second-hand-market-detail/second-hand-market-detail.wxml -->
 <view class="container">
 	<view class="swiper-container">
 		<swiper

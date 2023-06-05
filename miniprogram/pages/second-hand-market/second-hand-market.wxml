@@ -31,9 +31,7 @@
 		<scroll-view class="tag-selector-scroller" scroll-x="true">
 			<block wx:for="{{tags}}" wx:key="*this">
 				<view class="tag-item {{activeTagIndex == index ? 'tag-item-active' : ''}}" data-current-index="{{index}}" bindtap="changeTag">
-					<text class="tag-item-text {{activeTagIndex == index ? 'tag-item-text-active' : ''}}">
-						{{item}}
-					</text>
+					<text class="tag-item-text {{activeTagIndex == index ? 'tag-item-text-active' : ''}}">{{item}}</text>
 				</view>
 			</block>
 		</scroll-view>
@@ -61,4 +59,3 @@
 		</block>
 	</view>
 </view>
-

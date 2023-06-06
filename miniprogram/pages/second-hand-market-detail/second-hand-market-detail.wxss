@@ -1,4 +1,4 @@
-/* pages/second-hand-market-detail/second-hand-market-detail.css */
+/* pages/second-hand-market-detail/second-hand-market-detail.wxss */
 .container {
 	width: 100%;
 	padding-bottom: 125rpx;

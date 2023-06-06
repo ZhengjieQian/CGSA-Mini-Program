@@ -1,12 +1,7 @@
 <!-- pages/second-hand-market-detail/second-hand-market-detail.wxml -->
 <view class="container">
 	<view class="swiper-container">
-		<swiper
-		 class="swiper"
-		 autoplay="true"
-		 interval="5000"
-		 duration="1300"
-		>
+		<swiper class="swiper" autoplay="true" interval="5000" duration="1300">
 			<block wx:for="{{swiperImages}}" wx:for-item="image" wx:key="*this">
 				<swiper-item>
 					<image class="swiper-image" src="{{image}}" mode="aspectFill" />
@@ -34,9 +29,9 @@
 		<view class="description-content">
 			<text class="{{['description-content-text', !descCollapseStatus && 'description-content-text-showall']}}">
 				<text class="description-content-topic">#电子产品</text>
-			出平底锅，99新皮卡斤伊布限定switch+游戏若干
-			塞尔达,动森,舞力全开，去皮去伊，任亏券一个可兑换任意游戏，精灵球plus，索尼wi1000x无线耳机，出99新new
-			3ds 11，所有物品包装配配件产全
+			  出平底锅，99新皮卡斤伊布限定switch+游戏若干
+			  塞尔达,动森,舞力全开，去皮去伊，任亏券一个可兑换任意游戏，精灵球plus，索尼wi1000x无线耳机，出99新new
+			  3ds 11，所有物品包装配配件产全
 			</text>
 			<view class="description-content-text-hidden">
 				<text class="description-content-topic">#电子产品</text>

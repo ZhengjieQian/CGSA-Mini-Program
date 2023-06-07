@@ -20,13 +20,15 @@ Page({
       avatar: "../../images/second-hand-market-detail/user_avatar.jpg",
       date: "2023-02-20",
       text: "GT3上运输用轮胎，基本不用，生产日期Front 2218 rear，line9sade，微信：hu22001gulize",
-      likes: 0
+      likes: 0,
+      liked: false
     }, {
       username: "Stella1",
       avatar: "../../images/second-hand-market-detail/user_avatar.jpg",
       date: "2019-11-12",
       text: "这个得先有911",
       likes: 1,
+      liked: true
     }],
     commentImage: "../../images/second-hand-market-detail/comment_icon.jpg"
   },
@@ -52,6 +54,21 @@ Page({
   // 用户点击评论框
   commentTextBoxTapped() {
     console.log("编辑评论");
+  },
+  // 用户点击某条评论的点赞按钮
+  commentListLikeBtnTapped(e) {
+    let index = e.currentTarget.dataset.index;
+    let key = 'commentList[' + index + ']';
+    let item = this.data.commentList[index];
+    item.liked = !item.liked;
+    if (item.liked) {
+      item.likes += 1;
+    } else {
+      item.likes -= 1;
+    }
+    this.setData({
+      [key]: item
+    });
   },
   // 用户点击分享按钮
   shareBtnTapped() {

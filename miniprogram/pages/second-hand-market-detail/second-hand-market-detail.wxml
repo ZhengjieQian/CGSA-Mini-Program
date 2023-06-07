@@ -88,7 +88,8 @@
 							<text class="comment-item-detail-user-date">{{item.date}}</text>
 						</view>
 						<view class="comment-item-detail-user-like-comment">
-							<image class="comment-item-detail-like-image" src="{{likeImage}}" />
+							<image class="comment-item-detail-like-image" data-index="{{index}}"
+                src="{{item.liked ? likedImage : likeImage}}" bindtap="commentListLikeBtnTapped" />
 							<text class="comment-item-detail-like-text">{{item.likes}}</text>
 							<image class="comment-item-detail-comment-image" src="{{commentImage}}" />
 						</view>

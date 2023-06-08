@@ -8,7 +8,7 @@
 			<input class="search-bar-input" type="text" placeholder="搜索二手商品" bindinput="searchInput" />
 		</view>
 	</view>
-	<view class="filter-container">
+	<!-- <view class="filter-container">
 		<view class="filter-item-container">
 			<text class="filter-item-text">综合排序</text>
 			<image class="filter-item-image" src="{{filterItemIcon}}" mode="widthFix" />
@@ -21,7 +21,12 @@
 			<text class="filter-item-text">不限</text>
 			<image class="filter-item-image" src="{{filterItemIcon}}" mode="widthFix" />
 		</view>
-	</view>
+	</view> -->
+	<van-dropdown-menu>
+		<van-dropdown-item value="{{comprehensiveSortValue}}" options="{{comprehensiveSortOptions}}" />
+		<van-dropdown-item value="{{priceSortValue}}" options="{{priceSortOptions}}" />
+		<van-dropdown-item value="{{conditionSortValue}}" options="{{conditionSortOptions}}" />
+	</van-dropdown-menu>
 	<view class="tag-selector-container">
 		<scroll-view class="tag-selector-scroller" scroll-x="true">
 			<block wx:for="{{tags}}" wx:key="*this">

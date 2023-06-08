@@ -30,7 +30,8 @@ Page({
       likes: 1,
       liked: true
     }],
-    commentImage: "../../images/second-hand-market-detail/comment_icon.jpg"
+    commentImage: "../../images/second-hand-market-detail/comment_icon.jpg",
+    hideCommentModal: false  // 隐藏用户评论对话框
   },
   onReady: function () {
     this.calcDescOverflow();
@@ -54,6 +55,9 @@ Page({
   // 用户点击评论框
   commentTextBoxTapped() {
     console.log("编辑评论");
+    this.setData({
+      hideCommentModal: !this.data.hideCommentModal
+    });
   },
   // 用户点击某条评论的点赞按钮
   commentListLikeBtnTapped(e) {

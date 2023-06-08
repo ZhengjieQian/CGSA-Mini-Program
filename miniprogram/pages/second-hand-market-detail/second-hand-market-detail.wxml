@@ -124,3 +124,7 @@
 	<view class="footer-blank" />
 </view>
 
+<modal hidden="{{hideCommentModal}}">
+  <text class="modal-comment-title-text">留言</text>
+  <input type="text" placeholder="问问更多细节~" />
+</modal>

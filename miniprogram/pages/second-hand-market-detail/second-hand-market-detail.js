@@ -31,7 +31,8 @@ Page({
       liked: true
     }],
     commentImage: "../../images/second-hand-market-detail/comment_icon.jpg",
-    hideCommentModal: false  // 隐藏用户评论对话框
+    hideCommentModal: true,  // 隐藏用户评论对话框
+    modalAddImageImage: '../../images/second-hand-market-detail/modal_add_image.jpg'
   },
   onReady: function () {
     this.calcDescOverflow();
@@ -58,6 +59,16 @@ Page({
     this.setData({
       hideCommentModal: !this.data.hideCommentModal
     });
+  },
+  // 用户点击评论对话框的发布按钮
+  commentModalPost() {
+    console.log("发布评论");
+    this.setData({
+      hideCommentModal: !this.data.hideCommentModal
+    });
+  },
+  commentModalAddImage() {
+    console.log('添加图片');
   },
   // 用户点击某条评论的点赞按钮
   commentListLikeBtnTapped(e) {

@@ -124,7 +124,8 @@
 	<view class="footer-blank" />
 </view>
 
-<modal hidden="{{hideCommentModal}}">
+<modal hidden="{{hideCommentModal}}" no-cancel confirm-text="发布" bindconfirm="commentModalPost">
   <text class="modal-comment-title-text">留言</text>
-  <input type="text" placeholder="问问更多细节~" />
+  <textarea class="modal-comment-textarea" type="text" placeholder="问问更多细节~" />
+  <image class="modal-comment-image" src="{{modalAddImageImage}}" bindtap="commentModalAddImage"></image>
 </modal>

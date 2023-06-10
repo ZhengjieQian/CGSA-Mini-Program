@@ -367,3 +367,13 @@
   font-weight: bold;
   font-size: 1.1rem;
 }
+
+.modal-comment-textarea {
+  height: 200rpx;
+  margin-top: 20rpx;
+}
+
+.modal-comment-image {
+  width: 100rpx;
+  height: 100rpx;
+}

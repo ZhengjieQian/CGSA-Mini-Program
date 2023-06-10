@@ -11,7 +11,7 @@ Page({
             { text: "价格降序", value: 2, icon: "" },
             { text: "价格升序", value: 3, icon: "" },
         ],
-        priceTitle: "",
+        priceTitle: "价格不限",
         priceSortValue: 0,
         priceSortOptions: [
             { text: "价格不限", value: 0, icon: "" },
@@ -101,11 +101,11 @@ Page({
             },
         ],
     },
-    onReady() {
-        this.setData({
-            priceTitle: this.data.priceSortOptions[0].text,
-        });
-    },
+    // onReady() {
+    //     this.setData({
+    //         priceTitle: this.data.priceSortOptions[0].text,
+    //     });
+    // },
     // minPriceInput(e) {
     //     this.setData({
     //         minPrice: e.detail.value,
@@ -132,6 +132,7 @@ Page({
         console.log("价格范围" + this.data.minPrice + "-" + this.data.maxPrice);
         this.setData({
             priceTitle: "$" + this.data.minPrice + "-$" + this.data.maxPrice,
+            priceSortValue: 0,
         });
         this.selectComponent("#price-range").toggle();
     },
@@ -141,7 +142,7 @@ Page({
             maxPrice: "",
         });
     },
-    updateTitle(e) {
+    onPriceOptionSelect(e) {
         // console.log(e);
         if (!typeof e.detail === "number") {
             return;
@@ -149,6 +150,8 @@ Page({
         this.setData({
             priceSortValue: e.detail,
             priceTitle: this.data.priceSortOptions[e.detail].text,
+            minPrice: "",
+            maxPrice: "",
         });
         // console.log(
         //     "价格排序" +

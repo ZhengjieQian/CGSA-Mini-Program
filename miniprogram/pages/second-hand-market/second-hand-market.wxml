@@ -8,24 +8,14 @@
 			<input class="search-bar-input" type="text" placeholder="搜索二手商品" bindinput="searchInput" />
 		</view>
 	</view>
-	<!-- <view class="filter-container">
-		<view class="filter-item-container">
-			<text class="filter-item-text">综合排序</text>
-			<image class="filter-item-image" src="{{filterItemIcon}}" mode="widthFix" />
-		</view>
-		<view class="filter-item-container">
-			<text class="filter-item-text">价格</text>
-			<image class="filter-item-image" src="{{filterItemIcon}}" mode="widthFix" />
-		</view>
-		<view class="filter-item-container">
-			<text class="filter-item-text">不限</text>
-			<image class="filter-item-image" src="{{filterItemIcon}}" mode="widthFix" />
-		</view>
-	</view> -->
+	
 	<van-dropdown-menu>
 		<van-dropdown-item value="{{comprehensiveSortValue}}" options="{{comprehensiveSortOptions}}" />
-		<van-dropdown-item options="{{priceSortOptions}}" id="price-range" title="{{priceTitle}}" bind:change="updateTitle">
-			<van-cell>
+		<van-dropdown-item options="{{priceSortOptions}}" id="price-range" title="{{priceTitle}}" bind:change="onPriceOptionSelect">
+			<van-cell custom-class="customized-price-range-cell">
+				<view style="text-align: left; margin-left: 30rpx">
+          			<text>自定义价格</text>
+        		</view>
 				<van-row>
 					<van-col span="6">
 						<van-field border="true" placeholder="最小金额" model:value="{{minPrice}}"/>
@@ -39,7 +29,7 @@
 						<van-field border="true" placeholder="最大金额" model:value="{{maxPrice}}"/>
 					</van-col>
 					<van-col span="5">
-						<van-button type="primary" bindtap="clearPrice">reset</van-button>
+						<van-button type="primary" bindtap="clearPrice">重置</van-button>
 					</van-col>
 					<van-col span="6">
 						<van-button type="danger" bindtap="getPriceRange">确认</van-button>

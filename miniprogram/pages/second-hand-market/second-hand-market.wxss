@@ -190,7 +190,6 @@
   font-family: 'Times New Roman', Times, sans-serif;
 }
 
-.vant-field-bg {
-  background-color: #f4f4f4 !important;
-  color: #da251a !important;
-}
+.customized-price-range-cell {
+	padding-left: 0 !important;
+  }

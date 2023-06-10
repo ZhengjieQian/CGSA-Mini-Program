@@ -22,7 +22,7 @@
         </view>
         <van-row>
           <van-col span="6" offset="-1">
-            <van-field border="true" placeholder="最小金额" model:value="{{minPrice}}"/>
+            <van-field type="number" border="true" placeholder="最小金额" model:value="{{minPrice}}"/>
           </van-col>
           <van-col span="1">
             <view style="margin-top: 20rpx">
@@ -30,10 +30,10 @@
             </view>
           </van-col>
           <van-col span="6">
-            <van-field border="true" placeholder="最大金额" model:value="{{maxPrice}}" />
+            <van-field type="number" border="true" placeholder="最大金额" model:value="{{maxPrice}}" />
           </van-col>
           <van-col span="5">
-            <van-button type="primary" bindtap="clearPrice">reset</van-button>
+            <van-button type="primary" bindtap="clearPrice">重置</van-button>
           </van-col>
           <van-col span="6">
             <van-button type="danger" bindtap="getPriceRange">确认</van-button>

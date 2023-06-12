@@ -1,2 +1,2 @@
 <!--pages/school-info/school-info.wxml-->
-<text>pages/school-info/school-info.wxml</text>
+<web-view src="https://mp.weixin.qq.com/s/fz3_N9hYOM8JnADHOpL5gA"></web-view>

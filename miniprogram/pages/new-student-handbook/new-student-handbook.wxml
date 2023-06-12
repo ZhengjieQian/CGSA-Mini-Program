@@ -1,2 +1,2 @@
-<!--pages/new-student-handbook/new-student-handbook.wxml-->
-<text>pages/new-student-handbook/new-student-handbook.wxml</text>
+<!-- pages/new-student-handbook/new-student-handbook.wxml -->
+<web-view src="https://mp.weixin.qq.com/s/MKIaRqw7A3tPdDH96lT_9A"></web-view>

@@ -1,54 +1,55 @@
 <!-- pages/second-hand-market/second-hand-market.wxml -->
 <view class="container">
-	<view class="search-bar-container">
-		<view class="search-bar">
-			<view class="search-bar-image-container" bindtap="searchBtnTapped">
-				<image class="search-bar-image" src="{{searchIcon}}" mode="widthFix" />
-			</view>
-			<input class="search-bar-input" type="text" placeholder="搜索二手商品" bindinput="searchInput" />
-		</view>
-	</view>
-	
-	<van-dropdown-menu>
-		<van-dropdown-item value="{{comprehensiveSortValue}}" options="{{comprehensiveSortOptions}}" />
-		<van-dropdown-item options="{{priceSortOptions}}" id="price-range" title="{{priceTitle}}" bind:change="onPriceOptionSelect">
-			<van-cell custom-class="customized-price-range-cell">
-				<view style="text-align: left; margin-left: 30rpx">
-          			<text>自定义价格</text>
-        		</view>
-				<van-row>
-					<van-col span="6">
-						<van-field type="number" border="true" placeholder="最小金额" model:value="{{minPrice}}"/>
-					</van-col>
-					<van-col span="1">
-						<view style="margin-top: 20rpx">
-							<text>-</text>
-						</view>
-					</van-col>
-					<van-col span="6">
-						<van-field type="number" border="true" placeholder="最大金额" model:value="{{maxPrice}}"/>
-					</van-col>
-					<van-col span="5">
-						<van-button type="primary" bindtap="clearPrice">重置</van-button>
-					</van-col>
-					<van-col span="6">
-						<van-button type="danger" bindtap="getPriceRange">确认</van-button>
-					</van-col>
-				</van-row>
-			</van-cell>
-		</van-dropdown-item>
-		<van-dropdown-item value="{{conditionSortValue}}" options="{{conditionSortOptions}}" />
-	</van-dropdown-menu>
-	<view class="tag-selector-container">
-		<scroll-view class="tag-selector-scroller" scroll-x="true">
-			<block wx:for="{{tags}}" wx:key="*this">
-				<view class="tag-item {{activeTagIndex == index ? 'tag-item-active' : ''}}"
-        data-current-index="{{index}}" bindtap="changeTag">
-					<text class="tag-item-text {{activeTagIndex == index ? 'tag-item-text-active' : ''}}">{{item}}</text>
-				</view>
-			</block>
-		</scroll-view>
-	</view>
+  <view class="top-nav">
+    <view class="search-bar-container">
+      <view class="search-bar">
+        <view class="search-bar-image-container" bindtap="searchBtnTapped">
+          <image class="search-bar-image" src="{{searchIcon}}" mode="widthFix" />
+        </view>
+        <input class="search-bar-input" type="text" placeholder="搜索二手商品" bindinput="searchInput" />
+      </view>
+    </view>
+    <van-dropdown-menu>
+      <van-dropdown-item value="{{comprehensiveSortValue}}" options="{{comprehensiveSortOptions}}" />
+      <van-dropdown-item options="{{priceSortOptions}}" id="price-range" title="{{priceTitle}}" bind:change="onPriceOptionSelect">
+        <van-cell custom-class="customized-price-range-cell">
+          <view style="text-align: left; margin-left: 30rpx">
+                  <text>自定义价格</text>
+              </view>
+          <van-row>
+            <van-col span="6">
+              <van-field type="number" border="true" placeholder="最小金额" model:value="{{minPrice}}"/>
+            </van-col>
+            <van-col span="1">
+              <view style="margin-top: 20rpx">
+                <text>-</text>
+              </view>
+            </van-col>
+            <van-col span="6">
+              <van-field type="number" border="true" placeholder="最大金额" model:value="{{maxPrice}}"/>
+            </van-col>
+            <van-col span="5">
+              <van-button type="primary" bindtap="clearPrice">重置</van-button>
+            </van-col>
+            <van-col span="6">
+              <van-button type="danger" bindtap="getPriceRange">确认</van-button>
+            </van-col>
+          </van-row>
+        </van-cell>
+      </van-dropdown-item>
+      <van-dropdown-item value="{{conditionSortValue}}" options="{{conditionSortOptions}}" />
+    </van-dropdown-menu>
+    <view class="tag-selector-container">
+      <scroll-view class="tag-selector-scroller" scroll-x="true">
+        <block wx:for="{{tags}}" wx:key="*this">
+          <view class="tag-item {{activeTagIndex == index ? 'tag-item-active' : ''}}"
+          data-current-index="{{index}}" bindtap="changeTag">
+            <text class="tag-item-text {{activeTagIndex == index ? 'tag-item-text-active' : ''}}">{{item}}</text>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
 	<view class="content-container">
 		<block wx:for="{{products}}" wx:key="title">
 			<view class="product-container" data-product-index="{{index}}" bindtap="productTapped">
@@ -71,4 +72,8 @@
 			</view>
 		</block>
 	</view>
+</view>
+
+<view class="add-post-container" bindtap="addPostTapped">
+  <image class="add-post-image" src="{{addPostImage}}"></image>
 </view>

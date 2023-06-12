@@ -100,6 +100,7 @@ Page({
                 date: "04-26",
             },
         ],
+        addPostImage: '../../images/second-hand-market/add_post.png'
     },
     // onReady() {
     //     this.setData({
@@ -176,5 +177,10 @@ Page({
         wx.navigateTo({
             url: "../../pages/second-hand-market-detail/second-hand-market-detail",
         });
+    },
+    addPostTapped() {
+      wx.navigateTo({
+        url: '../publish-second-hand/publish-second-hand',
+      })
     },
 });

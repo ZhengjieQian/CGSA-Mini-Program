@@ -2,6 +2,11 @@
 .container {
 	width: 100%;
   }
+
+  .top-nav {
+    top: 0px;
+    position: sticky;
+  }
   
   .search-bar-container {
 	height: 100rpx;
@@ -196,4 +201,23 @@
 
   .customized-van-row {
 	padding: 10rpx 30rpx;
+  }
+
+  .add-post-container {
+    width: 100rpx;
+    height: 100rpx;
+    position: fixed;
+    bottom: 100rpx;
+    right: 40rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    background: linear-gradient(to bottom, #ffac77 0%, #fc4660 100%);
+    box-shadow: 0 0 10rpx 5rpx #fecfd0;
+  }
+  
+  .add-post-image {
+    width: 46rpx;
+    height: 47rpx;
   }

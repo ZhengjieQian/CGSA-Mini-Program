@@ -97,6 +97,7 @@ Page({
                 date: "04-26",
             },
         ],
+        addPostImage: '../../images/second-hand-market/add_post.png',
     },
     getPriceRange() {
         if (!this.data.minPrice || !this.data.maxPrice) {
@@ -158,6 +159,11 @@ Page({
         wx.navigateTo({
             url: "../../pages/second-hand-market-detail/second-hand-market-detail",
         });
+    },
+    addPostTapped() {
+      wx.navigateTo({
+        url: '../publish-housing-info/publish-housing-info',
+      })
     },
 
     /**

@@ -6,7 +6,8 @@
         <view class="search-bar-image-container" bindtap="searchBtnTapped">
           <image class="search-bar-image" src="{{searchIcon}}" mode="widthFix" />
         </view>
-        <input class="search-bar-input" type="text" placeholder="搜索二手商品" bindinput="searchInput" />
+        <input class="search-bar-input" type="text" placeholder="搜索二手商品"
+          bindinput="searchInput" bindconfirm="searchBtnTapped" />
       </view>
     </view>
     <van-dropdown-menu>

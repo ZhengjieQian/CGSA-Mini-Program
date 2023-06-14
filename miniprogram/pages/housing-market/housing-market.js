@@ -22,7 +22,33 @@ Page({
             { text: "$1200-$1600", value: 3, icon: "" },
             { text: "$1600以上", value: 4, icon: "" },
         ],
-
+        furnitureOptions: [
+            { text: "Any", value: 0, toggled: false },
+            { text: "有家具", value: 1, toggled: false },
+            { text: "无家具", value: 2, toggled: false },
+        ],
+        bedroomOptions: [
+            { text: "Any", value: -1, toggled: false },
+            { text: "Studio", value: 0, toggled: false },
+            { text: "1", value: 1, toggled: false },
+            { text: "2", value: 2, toggled: false },
+            { text: "3", value: 3, toggled: false },
+            { text: "4+", value: 4, toggled: false },
+        ],
+        selectedBedroomOptions: [],
+        bathroomOptions: [
+            { text: "Any", value: -1 },
+            { text: "1", value: 1 },
+            { text: "2", value: 2 },
+            { text: "3", value: 3 },
+            { text: "4+", value: 4 },
+        ],
+        leaseLengthOptions: [
+            { text: "Any", value: 0, toggled: false },
+            { text: "小于一年", value: 1, toggled: false },
+            { text: "大于一年", value: 2, toggled: false },
+        ],
+        selectedBathroomOptions: [],
         searchIcon: "../../images/second-hand-market/search_icon.jpg",
         searchBarKeyword: "",
         filterItemIcon: "../../images/second-hand-market/filter_item_icon.jpg",
@@ -97,7 +123,7 @@ Page({
                 date: "04-26",
             },
         ],
-        addPostImage: '../../images/second-hand-market/add_post.png',
+        addPostImage: "../../images/second-hand-market/add_post.png",
     },
     getPriceRange() {
         if (!this.data.minPrice || !this.data.maxPrice) {
@@ -141,6 +167,19 @@ Page({
         //         this.data.priceSortOptions[this.data.priceSortValue].text
         // );
     },
+    onBedroomButtonTap(e) {
+        console.log(e);
+        this.setData({
+            ["bedroomOptions[" +
+            e.currentTarget.dataset.currentIndex +
+            "].toggled"]:
+                !this.data.bedroomOptions[e.currentTarget.dataset.currentIndex]
+                    .toggled,
+        });
+        console.log(
+            this.data.bedroomOptions[e.currentTarget.dataset.currentIndex]
+        );
+    },
     searchBtnTapped() {
         console.log("搜索" + this.data.searchBarKeyword);
     },
@@ -161,9 +200,9 @@ Page({
         });
     },
     addPostTapped() {
-      wx.navigateTo({
-        url: '../publish-housing-info/publish-housing-info',
-      })
+        wx.navigateTo({
+            url: "../publish-housing-info/publish-housing-info",
+        });
     },
 
     /**

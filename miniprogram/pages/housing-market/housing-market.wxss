@@ -221,3 +221,22 @@
     width: 46rpx;
     height: 47rpx;
   }
+
+  .button-container {
+	margin: 10rpx 30rpx;
+	display: flex;
+	height: 60rpx;
+	justify-content: space-evenly;
+  }
+
+  .housing-button-style {
+	height: 60rpx;
+	display: flex;
+	align-items: center;
+	font-size: 1rem;
+  }
+
+  .housing-button-toggled {
+	background-color: #da251a !important;
+	color: #ffffff !important;
+  }

@@ -46,19 +46,42 @@
         <view style="text-align: left; margin-left: 30rpx">
             <text>家具</text>
         </view>
-        <van-radio-group value="{{ radio }}" bind:change="onChange">
-      <van-row custom-class="customized-van-row">
-        <van-col span="8">
-          <van-radio name="1" checked-color="#ff0000">全部</van-radio>
-        </van-col>
-        <van-col span="8">
-          <van-radio name="2" checked-color="#ff0000">带家具</van-radio>
-        </van-col>
-        <van-col span="8">
-          <van-radio name="3" checked-color="#ff0000">不带家具</van-radio>
-        </van-col>
-      </van-row>
-        </van-radio-group>
+        <view class="button-container">
+        <block wx:for="{{furnitureOptions}}" wx:key="index" wx:for-item="item">
+          <button type="default" 
+                      class="housing-button-style {{item.toggled ? 'housing-button-toggled' : ''}}" 
+                      data-current-index="{{index}}"
+                      bindtap="onBedroomButtonTap" 
+                      data-value="{{item.value}}">
+                      {{item.text}}</button>
+        </block>
+      </view>
+      <view style="text-align: left; margin-left: 30rpx">
+          <text>户型</text>
+      </view>
+      <view class="button-container">
+      <block wx:for="{{bedroomOptions}}" wx:key="index" wx:for-item="item">
+        <button type="default" 
+                    class="housing-button-style {{item.toggled ? 'housing-button-toggled' : ''}}" 
+                    data-current-index="{{index}}"
+                    bindtap="onBedroomButtonTap" 
+                    data-value="{{item.value}}">
+                    {{item.text}}</button>
+      </block>
+    </view>
+    <view style="text-align: left; margin-left: 30rpx">
+            <text>租期</text>
+        </view>
+        <view class="button-container">
+        <block wx:for="{{leaseLengthOptions}}" wx:key="index" wx:for-item="item">
+          <button type="default" 
+                      class="housing-button-style {{item.toggled ? 'housing-button-toggled' : ''}}" 
+                      data-current-index="{{index}}"
+                      bindtap="onBedroomButtonTap" 
+                      data-value="{{item.value}}">
+                      {{item.text}}</button>
+        </block>
+      </view>
 
         
       </van-dropdown-item>

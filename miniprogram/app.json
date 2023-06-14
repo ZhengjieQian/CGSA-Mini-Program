@@ -1,9 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/events/index",
-    "pages/resources/index",
-    "pages/mine/index",
+    "pages/events/events",
+    "pages/resources/resources",
+    "pages/mine/mine",
     "pages/second-hand-market/second-hand-market",
     "pages/housing-market/housing-market",
     "pages/forum/forum",
@@ -46,19 +46,19 @@
         "selectedIconPath": "images/tab-bar-icon/index_selected.png"
       },
       {
-        "pagePath": "pages/events/index",
+        "pagePath": "pages/events/events",
         "text": "活动",
         "iconPath": "images/tab-bar-icon/events.png",
         "selectedIconPath": "images/tab-bar-icon/events_selected.png"
       },
       {
-        "pagePath": "pages/resources/index",
+        "pagePath": "pages/resources/resources",
         "text": "资源",
         "iconPath": "images/tab-bar-icon/resources.png",
         "selectedIconPath": "images/tab-bar-icon/resources_selected.png"
       },
       {
-        "pagePath": "pages/mine/index",
+        "pagePath": "pages/mine/mine",
         "text": "我的",
         "iconPath": "images/tab-bar-icon/mine.png",
         "selectedIconPath": "images/tab-bar-icon/mine_selected.png"

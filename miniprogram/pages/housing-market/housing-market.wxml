@@ -51,7 +51,7 @@
           <button type="default" 
                       class="housing-button-style {{item.toggled ? 'housing-button-toggled' : ''}}" 
                       data-current-index="{{index}}"
-                      bindtap="onBedroomButtonTap" 
+                      bindtap="onFurnitureButtonTap" 
                       data-value="{{item.value}}">
                       {{item.text}}</button>
         </block>
@@ -77,7 +77,7 @@
           <button type="default" 
                       class="housing-button-style {{item.toggled ? 'housing-button-toggled' : ''}}" 
                       data-current-index="{{index}}"
-                      bindtap="onBedroomButtonTap" 
+                      bindtap="onLeaseLengthButtonTap" 
                       data-value="{{item.value}}">
                       {{item.text}}</button>
         </block>

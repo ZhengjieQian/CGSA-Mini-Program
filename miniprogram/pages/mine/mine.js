@@ -5,10 +5,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userInfo: {},
-    hasUserInfo: false,
+    openID: '',
     promotionCardBackgroundImage: '../../images/mine/promotion_card_background.jpg',
     avatarDefaultImage: '../../images/mine/avatar_default.png',
+    avatarUrl: '',
+    nickname: '',
     userLocation: '加利福尼亚州',
     widgets: [{
       title: '我的消息',
@@ -28,19 +29,20 @@ Page({
       link: '../../pages/contact-us/contact-us'
     }]
   },
-  getUserProfile(e) {
-    wx.getUserProfile({
-      desc: '用于完善会员资料',
-      success: (res) => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        });
-      }
+  onLoad: function() {
+    console.log(getApp().globalData.openID)
+  },
+  onChooseAvatar(e) {
+    let avatarUrl = e.detail.avatarUrl;
+    this.setData({
+      avatarUrl: avatarUrl
     });
   },
+  nicknameInput(e) {
+    console.log(e.detail.value);
+  },
   showPromoCard() {
-    if (this.data.hasUserInfo) {
+    if (this.data.nickname && this.data.avatarUrl) {
       wx.navigateTo({
         url: '../../pages/promo-card/promo-card'
       });

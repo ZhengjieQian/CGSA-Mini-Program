@@ -1,13 +1,27 @@
 // app.js
-const { globalSetting } = require("globalSetting.js");
 App({
-    onLaunch: function () {
-        if (!wx.cloud) {
-            console.error("请使用 2.2.3 或以上的基础库以使用云能力");
-        } else {
-            wx.cloud.init({
-                env: globalSetting.cloudID,
-            });
-        }
-    },
+  globalData: {
+    cloudID: 'cgsa-mini-program-9e3o2q71fdb4e3',
+    appID: 'wx4c183d2aec2c73a4',
+    openID: ''
+  },
+  onLaunch: function() {
+    this.initCloudEnv();
+  },
+  // 初始化云环境
+  initCloudEnv() {
+    wx.cloud.init({
+      env: this.globalData.cloudID,
+    }).then(() => {
+      this.getUserID();
+    });
+  },
+  // 获取用户的 openID
+  getUserID() {
+    wx.cloud.callFunction({
+      name: 'getUserID'
+    }).then(res => {
+      this.globalData.openID = res.result.openid;
+    });
+  }
 });

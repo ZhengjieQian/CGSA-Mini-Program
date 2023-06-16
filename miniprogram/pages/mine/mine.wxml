@@ -1,28 +1,22 @@
-<!-- pages/mine/index.wxml -->
+<!-- pages/mine/mine.wxml -->
 <view class="container">
   <view class="promotion-card">
     <image class="promotion-card-bg" src="{{promotionCardBackgroundImage}}"></image>
     <view class="promotion-card-content" bindtap="showPromoCard">
       <view class="card-container">
-        <block wx:if="{{!hasUserInfo}}">
-          <view class="userinfo-container" bindtap="getUserProfile">
-            <image class="userinfo-avatar" src="{{avatarDefaultImage}}"></image>
-            <view class="userinfo-login">
-              <text class="userinfo-login-text">点击登录</text>
-            </view>
+        <view class="userinfo-container">
+          <button class="userinfo-avatar-container" open-type="chooseAvatar" bindchooseavatar="onChooseAvatar">
+            <image class="userinfo-avatar" src="{{avatarUrl ? avatarUrl : avatarDefaultImage}}"></image>
+          </button>
+          <view class="userinfo-nickname-container">
+            <input class="userinfo-nickname-input" type="nickname" placeholder="请输入昵称" />
+            <text class="userinfo-location">{{userLocation}}</text>
           </view>
-        </block>
-        <block wx:else>
-          <view class="userinfo-container">
-            <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
-            <view class="userinfo-nickname-container">
-              <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-              <text class="userinfo-location">{{userLocation}}</text>
-            </view>
-            <view class="userinfo-updateinfo-container">
-              <text class="userinfo-updateinfo">更新资料</text>
-            </view>
+          <view class="userinfo-updateinfo-container">
+            <text class="userinfo-updateinfo">更新资料</text>
           </view>
+        </view>
+        <block wx:if="{{!avatarUrl || !nickname}}">
           <view class="claim-container">
             <view class="claim" bindtap="claimCard">
               <text class="claim-text">立即领取  >></text>
@@ -32,10 +26,12 @@
       </view>
     </view>
   </view>
-  <block wx:if="{{hasUserInfo}}" wx:for="{{widgets}}" wx:key="title">
-    <view class="widget-container" data-link="{{item.link}}" bindtap="navigate">
-      <text class="widget-text">{{item.title}}</text>
-      <image class="widget-image" src="{{item.image}}" mode="aspectFit"></image>
-    </view>
+  <block wx:if="{{!avatarUrl || !nickname}}">
+    <block wx:for="{{widgets}}" wx:key="title">
+      <view class="widget-container" data-link="{{item.link}}" bindtap="navigate">
+        <text class="widget-text">{{item.title}}</text>
+        <image class="widget-image" src="{{item.image}}" mode="aspectFit"></image>
+      </view>
+    </block>
   </block>
 </view>

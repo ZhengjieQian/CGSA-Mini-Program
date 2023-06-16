@@ -23,12 +23,12 @@ Page({
             { text: "$1600以上", value: 4, icon: "" },
         ],
         furnitureOptions: [
-            { text: "Any", value: 0, toggled: false },
+            { text: "Any", value: 0, toggled: true },
             { text: "有家具", value: 1, toggled: false },
             { text: "无家具", value: 2, toggled: false },
         ],
         bedroomOptions: [
-            { text: "Any", value: -1, toggled: false },
+            { text: "Any", value: -1, toggled: true },
             { text: "Studio", value: 0, toggled: false },
             { text: "1", value: 1, toggled: false },
             { text: "2", value: 2, toggled: false },
@@ -44,7 +44,7 @@ Page({
             { text: "4+", value: 4 },
         ],
         leaseLengthOptions: [
-            { text: "Any", value: 0, toggled: false },
+            { text: "Any", value: 0, toggled: true },
             { text: "小于一年", value: 1, toggled: false },
             { text: "大于一年", value: 2, toggled: false },
         ],
@@ -169,16 +169,61 @@ Page({
     },
     onBedroomButtonTap(e) {
         console.log(e);
-        this.setData({
-            ["bedroomOptions[" +
-            e.currentTarget.dataset.currentIndex +
-            "].toggled"]:
-                !this.data.bedroomOptions[e.currentTarget.dataset.currentIndex]
-                    .toggled,
-        });
-        console.log(
-            this.data.bedroomOptions[e.currentTarget.dataset.currentIndex]
-        );
+        let idx = e.currentTarget.dataset.currentIndex;
+        // 选中不是any的选项
+        if (idx !== 0) {
+            this.setData({
+                ["bedroomOptions[" + idx + "].toggled"]:
+                    !this.data.bedroomOptions[idx].toggled,
+                ["bedroomOptions[0].toggled"]: false,
+            });
+            // 如果选中了any，其他选项都取消选中
+        } else {
+            if (this.data.bedroomOptions[0].toggled) {
+                this.setData({
+                    ["bedroomOptions[0].toggled"]:
+                        !this.data.bedroomOptions[idx].toggled,
+                });
+            } else {
+                let options = this.data.bedroomOptions;
+                options[0].toggled = true;
+                for (let i = 1; i < options.length; i++) {
+                    options[i].toggled = false;
+                }
+                this.setData({
+                    bedroomOptions: options,
+                });
+            }
+        }
+        // console.log(this.data.bedroomOptions[idx]);
+    },
+    onFurnitureButtonTap(e) {
+        for (let i = 0; i < this.data.furnitureOptions.length; i++) {
+            if (i === e.currentTarget.dataset.currentIndex) {
+                this.setData({
+                    ["furnitureOptions[" + i + "].toggled"]:
+                        !this.data.furnitureOptions[i].toggled,
+                });
+            } else {
+                this.setData({
+                    ["furnitureOptions[" + i + "].toggled"]: false,
+                });
+            }
+        }
+    },
+    onLeaseLengthButtonTap(e) {
+        for (let i = 0; i < this.data.leaseLengthOptions.length; i++) {
+            if (i === e.currentTarget.dataset.currentIndex) {
+                this.setData({
+                    ["leaseLengthOptions[" + i + "].toggled"]:
+                        !this.data.leaseLengthOptions[i].toggled,
+                });
+            } else {
+                this.setData({
+                    ["leaseLengthOptions[" + i + "].toggled"]: false,
+                });
+            }
+        }
     },
     searchBtnTapped() {
         console.log("搜索" + this.data.searchBarKeyword);

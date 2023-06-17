@@ -2,31 +2,34 @@
 <view class="container">
   <view class="promotion-card">
     <image class="promotion-card-bg" src="{{promotionCardBackgroundImage}}"></image>
-    <view class="promotion-card-content" bindtap="showPromoCard">
+    <view class="promotion-card-content">
       <view class="card-container">
-        <view class="userinfo-container">
-          <button class="userinfo-avatar-container" open-type="chooseAvatar" bindchooseavatar="onChooseAvatar">
-            <image class="userinfo-avatar" src="{{avatarUrl ? avatarUrl : avatarDefaultImage}}"></image>
-          </button>
-          <view class="userinfo-nickname-container">
-            <input class="userinfo-nickname-input" type="nickname" placeholder="请输入昵称" />
-            <text class="userinfo-location">{{userLocation}}</text>
+        <form bindsubmit="onUpdateUserInfoTapped">
+          <view class="userinfo-container">
+            <button class="userinfo-avatar-container" open-type="chooseAvatar" bindchooseavatar="onChooseAvatar">
+              <image class="userinfo-avatar" src="{{avatarUrl ? avatarUrl : avatarDefaultImage}}"></image>
+            </button>
+            <input class="userinfo-nickname" type="nickname" name="nickname" placeholder="点此输入昵称"
+            bindinput="onNicknameInput" />
+            <button class="userinfo-updateinfo-container" form-type="submit">
+              <text class="userinfo-updateinfo">更新信息</text>
+            </button>
           </view>
-          <view class="userinfo-updateinfo-container">
-            <text class="userinfo-updateinfo">更新资料</text>
-          </view>
-        </view>
-        <block wx:if="{{!avatarUrl || !nickname}}">
-          <view class="claim-container">
-            <view class="claim" bindtap="claimCard">
-              <text class="claim-text">立即领取  >></text>
+        </form>
+        <block wx:if="{{avatarUrl && nickname}}">
+          <view class="card-action-container">
+            <view class="claim-card-container" bindtap="onClaimCardTapped">
+              <text class="claim-card-text">立即领取  >></text>
+            </view>
+            <view class="show-card-container" bindtap="onShowPromoCardTapped">
+              <text class="show-card-text">查看折扣卡  >></text>
             </view>
           </view>
         </block>
       </view>
     </view>
   </view>
-  <block wx:if="{{!avatarUrl || !nickname}}">
+  <block wx:if="{{avatarUrl && nickname}}">
     <block wx:for="{{widgets}}" wx:key="title">
       <view class="widget-container" data-link="{{item.link}}" bindtap="navigate">
         <text class="widget-text">{{item.title}}</text>

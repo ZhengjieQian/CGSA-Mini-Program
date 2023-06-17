@@ -12,16 +12,21 @@ App({
   initCloudEnv() {
     wx.cloud.init({
       env: this.globalData.cloudID,
-    }).then(() => {
-      this.getUserID();
     });
   },
   // 获取用户的 openID
-  getUserID() {
-    wx.cloud.callFunction({
-      name: 'getUserID'
-    }).then(res => {
-      this.globalData.openID = res.result.openid;
+  getUserOpenID() {
+    return new Promise((resolve, reject) => {
+      wx.cloud.callFunction({
+        name: 'getUserID',
+        success: res => {
+          this.globalData.openID = res.result.openid;
+          resolve(res.result.openid);
+        },
+        fail: err => {
+          reject(err);
+        }
+      });
     });
   }
 });

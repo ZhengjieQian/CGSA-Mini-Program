@@ -10,7 +10,7 @@
               <image class="userinfo-avatar" src="{{avatarUrl ? avatarUrl : avatarDefaultImage}}"></image>
             </button>
             <input class="userinfo-nickname" type="nickname" name="nickname" placeholder="点此输入昵称"
-            bindinput="onNicknameInput" />
+            value="{{nickname}}" bindinput="onNicknameInput" />
             <button class="userinfo-updateinfo-container" form-type="submit">
               <text class="userinfo-updateinfo">更新信息</text>
             </button>

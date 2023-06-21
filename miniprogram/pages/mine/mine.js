@@ -105,14 +105,14 @@ Page({
                     fileList: [oldAvatarUrl]
                   }).then(() => {
                     wx.showToast({
-                      title: '替换+删除',
+                      title: '昵称头像已上传',
                       icon: 'success',
                       duration: 3000
                     });
                   });
                 } else {
                   wx.showToast({
-                    title: '替换',
+                    title: '昵称头像已上传',
                     icon: 'success',
                     duration: 3000
                   });
@@ -126,7 +126,7 @@ Page({
               }
             }).then(() => {
               wx.showToast({
-                title: '未替换',
+                title: '昵称头像已上传',
                 icon: 'success',
                 duration: 3000
               });

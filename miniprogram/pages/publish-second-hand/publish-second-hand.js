@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    addImage: '../../images/publish-second-hand/add_image.jpg',
+    addImage: 'cloud://cgsa-mini-program-9e3o2q71fdb4e3.6367-cgsa-mini-program-9e3o2q71fdb4e3-1315632320/images/publish-second-hand/add_image.jpg',
     forwardArrow: '../../images/publish-second-hand/forward_arrow.jpg'
   },
   addImage() {

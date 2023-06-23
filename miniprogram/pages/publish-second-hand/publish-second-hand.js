@@ -10,6 +10,11 @@ Page({
   },
   addImage() {
     console.log('添加图片');
+    wx.uploadFile({
+      filePath: 'filePath',
+      name: 'name',
+      url: 'url',
+    })
   },
   selectCategory() {
     console.log('选择类别');

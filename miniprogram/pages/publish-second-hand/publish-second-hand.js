@@ -1,20 +1,35 @@
 // pages/publish-second-hand/publish-second-hand.js
 // 发布二手信息
+var app = getApp();
+
 Page({
-  /**
-   * 页面的初始数据
-   */
   data: {
-    addImage: 'cloud://cgsa-mini-program-9e3o2q71fdb4e3.6367-cgsa-mini-program-9e3o2q71fdb4e3-1315632320/images/publish-second-hand/add_image.jpg',
-    forwardArrow: '../../images/publish-second-hand/forward_arrow.jpg'
+    addImage: 'cloud://cgsa-mini-program-9e3o2q71fdb4e3.6367-cgsa-mini-program-9e3o2q71fdb4e3-1315632320/images/second-hand-market/add_image.jpg',
+    forwardArrow: 'cloud://cgsa-mini-program-9e3o2q71fdb4e3.6367-cgsa-mini-program-9e3o2q71fdb4e3-1315632320/images/second-hand-market/forward_arrow.jpg',
+    detailWidgets: [{
+      title: '分类',
+      subtitle: '选择分类',
+      method: 'selectCategory'
+    }, {
+      title: '价格',
+      subtitle: '请填写价格',
+      method: 'inputPrice'
+    }, {
+      title: '联系方式',
+      subtitle: '请填写联系方式',
+      method: 'inputContactInfo'
+    }, {
+      title: '地理位置',
+      subtitle: '请填写所在位置',
+      method: 'inputLocation'
+    }]
+  },
+  // 页面生命周期 onLoad
+  onLoad: function() {
+    
   },
   addImage() {
     console.log('添加图片');
-    wx.uploadFile({
-      filePath: 'filePath',
-      name: 'name',
-      url: 'url',
-    })
   },
   selectCategory() {
     console.log('选择类别');
@@ -24,6 +39,9 @@ Page({
   },
   inputContactInfo() {
     console.log('输入联系方式');
+  },
+  inputLocation() {
+    console.log('输入地理位置');
   },
   postBtnTapped() {
     console.log('发布');

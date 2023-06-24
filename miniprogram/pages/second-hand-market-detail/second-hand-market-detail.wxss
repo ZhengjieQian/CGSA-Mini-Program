@@ -105,7 +105,7 @@
 	-webkit-line-clamp: 3;
 	-webkit-box-orient: vertical;
 }
-.description-content-topic {
+.description-content-tag {
 	margin-right: 20rpx;
 	color: #fdc83f;
 }

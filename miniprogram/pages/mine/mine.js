@@ -1,14 +1,10 @@
-// pages/mine/index.js
+// pages/mine/mine.js
 // 用户个人信息页面
 var app = getApp();
 
 Page({
-  /**
-   * 页面的初始数据
-   */
   data: {
     promotionCardBackgroundImage: 'cloud://cgsa-mini-program-9e3o2q71fdb4e3.6367-cgsa-mini-program-9e3o2q71fdb4e3-1315632320/images/mine/promotion_card_background.jpg',
-    avatarDefaultImage: 'cloud://cgsa-mini-program-9e3o2q71fdb4e3.6367-cgsa-mini-program-9e3o2q71fdb4e3-1315632320/images/avatar/avatar_default.png',
     avatarUrl: '',
     nickname: '',
     widgets: [{
@@ -33,31 +29,22 @@ Page({
   onLoad: function() {
     if(!app.globalData.openID) {  // 如果没有拿到用户的 openID，调用 app.js 的方法获取用户的 openID
       app.getUserOpenID().then(openID => {
-        this.initUserProfile(openID);
+        this.loadUserProfile(openID);
       });
     } else {  // 如果已经拿到 openID，直接进入下一步
-      this.initUserProfile(app.globalData.openID);
+      this.loadUserProfile(app.globalData.openID);
     }
   },
   // 拿到 openID 之后立刻加载此 openID 关联的头像和昵称
-  initUserProfile(openID) {
+  loadUserProfile(openID) {
     const userProfileDB = wx.cloud.database().collection('user_profile');
     userProfileDB.where({
       _openid: openID
     }).get().then(res => {
-      if (res.data.length == 0) {  // 新用户，在数据库中增加一条用户信息，使用默认的头像和昵称
-        userProfileDB.add({
-          data: {
-            nickname: '',
-            avatarUrl: this.data.avatarDefaultImage
-          }
-        });
-      } else {  // 老用户，加载数据库中的头像和昵称
-        this.setData({
-          nickname: res.data[0].nickname,
-          avatarUrl: res.data[0].avatarUrl
-        });
-      }
+      this.setData({
+        nickname: res.data[0].nickname,
+        avatarUrl: res.data[0].avatarUrl
+      });
     });
   },
   // 用户选择头像
@@ -74,6 +61,9 @@ Page({
   },
   // 用户点击更新信息
   onUpdateUserInfoTapped(e) {
+    wx.showLoading({
+      title: '加载中'
+    });
     if (!this.data.avatarUrl || !e.detail.value.nickname) {  // 头像或昵称没有补全，提示用户完成
       wx.showToast({
         title: '请选择头像并填写昵称',
@@ -90,7 +80,7 @@ Page({
         }).get().then(searchRes => {
           let oldAvatarUrl = searchRes.data[0].avatarUrl;
           if (this.data.avatarUrl != oldAvatarUrl) {  // 如果更换了头像，需替换原头像
-            wx.cloud.uploadFile({  // 上传头像，加上时间戳区分不同文件，防止由于系统缓存导致的头像更新延迟
+            wx.cloud.uploadFile({  // 上传头像，加上时间戳区分新老头像，从而立刻更新成新头像
               cloudPath: './images/avatar/' + app.globalData.openID + '_' + (new Date().valueOf()) + '.jpeg',
               filePath: this.data.avatarUrl
             }).then(uploadRes => {
@@ -100,22 +90,14 @@ Page({
                   avatarUrl: uploadRes.fileID
                 }
               }).then(() => {
-                if (oldAvatarUrl != this.data.avatarDefaultImage) {  // 如果之前用的不是默认头像，删除之前的头像
+                if (oldAvatarUrl != app.globalData.avatarDefaultImage) {  // 如果之前用的不是默认头像，删除之前的头像
                   wx.cloud.deleteFile({
                     fileList: [oldAvatarUrl]
                   }).then(() => {
-                    wx.showToast({
-                      title: '昵称头像已上传',
-                      icon: 'success',
-                      duration: 3000
-                    });
+                    this.showToast('昵称头像已上传', 'success', 3000);
                   });
                 } else {
-                  wx.showToast({
-                    title: '昵称头像已上传',
-                    icon: 'success',
-                    duration: 3000
-                  });
+                  this.showToast('昵称头像已上传', 'success', 3000);
                 }
               });
             });
@@ -125,11 +107,7 @@ Page({
                 nickname: this.data.nickname
               }
             }).then(() => {
-              wx.showToast({
-                title: '昵称头像已上传',
-                icon: 'success',
-                duration: 3000
-              });
+              this.showToast('昵称头像已上传', 'success', 3000);
             });
           }
         });
@@ -153,5 +131,13 @@ Page({
     wx.navigateTo({
       url: e.currentTarget.dataset.link
     });
+  },
+  // 显示提示框
+  showToast(title, icon, duration) {
+    wx.showToast({
+      title: title,
+      icon: icon,
+      duration: duration
+    })
   }
 });

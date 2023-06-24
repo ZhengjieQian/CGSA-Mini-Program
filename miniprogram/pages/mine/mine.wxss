@@ -1,4 +1,4 @@
-/* pages/mine/index.wxss */
+/* pages/mine/mine.wxss */
 .container {
   padding: 0 35rpx;
   display: flex;

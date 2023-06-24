@@ -122,6 +122,7 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
 
 .detail-image {
   width: 12rpx;
+  height: 22rpx;
 }
 
 .bottom-btn {

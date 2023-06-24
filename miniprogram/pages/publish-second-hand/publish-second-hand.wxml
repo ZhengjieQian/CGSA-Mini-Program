@@ -22,27 +22,15 @@
     </view>
   </view>
   <view class="detail-container">
-    <view class="detail-row">
-      <text>分类</text>
-      <view bindtap="selectCategory">
-        <text class="detail-placeholder-text placeholder-color">选择分类</text>
-        <image class="detail-image" src="{{forwardArrow}}" mode="widthFix"></image>
+    <block wx:for="{{detailWidgets}}" wx:key="*this">
+      <view class="detail-row">
+        <text>{{item.title}}</text>
+        <view bindtap="{{item.method}}">
+          <text class="detail-placeholder-text placeholder-color">{{item.subtitle}}</text>
+          <image class="detail-image" src="{{forwardArrow}}"></image>
+        </view>
       </view>
-    </view>
-    <view class="detail-row">
-      <text>价格</text>
-      <view bindtap="inputPrice">
-        <text class="detail-placeholder-text placeholder-color">请填写价格</text>
-        <image class="detail-image" src="{{forwardArrow}}" mode="widthFix"></image>
-      </view>
-    </view>
-    <view class="detail-row">
-      <text>联系方式</text>
-      <view bindtap="inputContactInfo">
-        <text class="detail-placeholder-text placeholder-color">请填写联系方式</text>
-        <image class="detail-image" src="{{forwardArrow}}" mode="widthFix"></image>
-      </view>
-    </view>
+    </block>
   </view>
 </view>
 <view class="bottom-btn" bindtap="postBtnTapped">

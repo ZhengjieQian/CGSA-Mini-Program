@@ -1,12 +1,20 @@
 <!-- pages/publish-second-hand/publish-second-hand.wxml -->
 <view class="container">
-  <view class="add-image-container">
+  <view class="add-image-container {{images.length ? 'add-image-container-flex-start' : ''}}">
     <view class="add-image-border" bindtap="addImage">
       <image class="add-image-image" src="{{addImage}}"></image>
     </view>
-    <view class="add-image-preview">
-      
-    </view>
+    <block wx:if="{{images.length}}">
+      <scroll-view class="add-image-preview" scroll-x="true">
+        <block wx:for="{{images}}" wx:key="*this">
+          <view class="add-image-preview-item">
+            <view class="add-image-preview-item-border">
+              <image class="add-image-preview-item-image" src="{{addImage}}"></image>
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+    </block>
   </view>
   <view class="content-container">
     <view class="content-title-container">

@@ -5,6 +5,7 @@ var app = getApp();
 Page({
   data: {
     addImage: 'cloud://cgsa-mini-program-9e3o2q71fdb4e3.6367-cgsa-mini-program-9e3o2q71fdb4e3-1315632320/images/second-hand-market/add_image.jpg',
+    images: ['','','','','','','','',''],
     forwardArrow: 'cloud://cgsa-mini-program-9e3o2q71fdb4e3.6367-cgsa-mini-program-9e3o2q71fdb4e3-1315632320/images/second-hand-market/forward_arrow.jpg',
     detailWidgets: [{
       title: '分类',

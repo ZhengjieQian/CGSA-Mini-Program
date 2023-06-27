@@ -26,7 +26,9 @@ Page({
   },
   // 页面生命周期 onLoad
   onLoad: function() {
-    
+    if(!app.globalData.openID) {  // 如果没有拿到用户的 openID，调用 app.js 的方法获取用户的 openID
+      app.getUserOpenID();
+    }
   },
   addImage() {
     console.log('添加图片');

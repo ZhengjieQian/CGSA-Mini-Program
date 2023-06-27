@@ -23,6 +23,11 @@
   border-radius: 0.3rem;
 }
 
+.add-image-preview {
+  display: flex;
+  align-items: center;
+}
+
 .content-container {
   height: 400rpx;
   margin-top: 25rpx;

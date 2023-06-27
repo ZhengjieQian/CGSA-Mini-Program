@@ -4,6 +4,9 @@
     <view class="add-image-border" bindtap="addImage">
       <image class="add-image-image" src="{{addImage}}"></image>
     </view>
+    <view class="add-image-preview">
+      
+    </view>
   </view>
   <view class="content-container">
     <view class="content-title-container">

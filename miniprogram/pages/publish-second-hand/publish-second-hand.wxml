@@ -11,6 +11,9 @@
             <view class="add-image-preview-item-border">
               <image class="add-image-preview-item-image" src="{{addImage}}"></image>
             </view>
+            <view class="">
+              
+            </view>
           </view>
         </block>
       </scroll-view>

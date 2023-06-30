@@ -8,11 +8,13 @@
       <scroll-view class="add-image-preview" scroll-x="true">
         <block wx:for="{{images}}" wx:key="*this">
           <view class="add-image-preview-item">
-            <view class="add-image-preview-item-border">
-              <image class="add-image-preview-item-image" src="{{addImage}}"></image>
-            </view>
-            <view class="">
-              
+            <view class="add-image-preview-item-container">
+              <view class="add-image-preview-item-image-border">
+                <image class="add-image-preview-item-image" src="{{addImageDefault}}"
+                  data-index="{{index}}" bindtap="previewImage"></image>
+                <image class="add-image-preview-item-cancel" src="{{addImageCancel}}"
+                  data-index="{{index}}" bindtap="cancelImage"></image>
+              </view>
             </view>
           </view>
         </block>

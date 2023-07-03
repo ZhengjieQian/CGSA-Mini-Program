@@ -7,7 +7,7 @@ Page({
     addImage: 'cloud://cgsa-mini-program-9e3o2q71fdb4e3.6367-cgsa-mini-program-9e3o2q71fdb4e3-1315632320/images/second-hand-market/add_image.jpg',
     addImageDefault: 'cloud://cgsa-mini-program-9e3o2q71fdb4e3.6367-cgsa-mini-program-9e3o2q71fdb4e3-1315632320/images/second-hand-market/add_image_default.jpg',
     addImageCancel: 'cloud://cgsa-mini-program-9e3o2q71fdb4e3.6367-cgsa-mini-program-9e3o2q71fdb4e3-1315632320/images/second-hand-market/add_image_cancel.png',
-    images: ['1','2','3','4','5','6','7','8','9','10'],
+    images: ['1','2','3','4','5','6','7','8','9'],
     forwardArrow: 'cloud://cgsa-mini-program-9e3o2q71fdb4e3.6367-cgsa-mini-program-9e3o2q71fdb4e3-1315632320/images/second-hand-market/forward_arrow.jpg',
     detailWidgets: [{
       title: '分类',

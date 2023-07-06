@@ -153,7 +153,7 @@ Page({
           cloudPath: './images/second-hand-market-product/' + app.globalData.openID + '_' + imgName,
           filePath: imgTempUrl,
           success: res => {
-            console.log(index);
+            console.log('正在上传第' + index + '张图片...');
             resolve(res.fileID);
           },
           fail: err => {

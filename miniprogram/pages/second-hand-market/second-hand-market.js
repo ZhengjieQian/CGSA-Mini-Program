@@ -189,4 +189,15 @@ Page({
         url: '../publish-second-hand/publish-second-hand',
       })
     },
+    // 从 Date() 方法创建的对象中获取月份和日期
+    parseDate(date) {
+      let year = date.getFullYear();
+      let month = date.getMonth() + 1;
+      let day = date.getDate();
+      function formatNumber(n) {
+        n = n.toString();
+        return n[1] ? n : '0' + n;
+      }
+      return [year, month, day].map(formatNumber).join('-');
+    },
 });

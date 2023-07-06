@@ -65,11 +65,7 @@ Page({
       title: '加载中'
     });
     if (!this.data.avatarUrl || !e.detail.value.nickname) {  // 头像或昵称没有补全，提示用户完成
-      wx.showToast({
-        title: '请选择头像并填写昵称',
-        icon: 'none',
-        duration: 3000
-      });
+      this.showToast('请选择头像并填写昵称', 'none', 3000);
     } else {  // 更新数据库中该用户的头像和昵称，删除原头像并上传新头像
       this.setData({
         nickname: e.detail.value.nickname

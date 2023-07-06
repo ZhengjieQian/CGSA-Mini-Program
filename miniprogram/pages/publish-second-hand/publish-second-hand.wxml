@@ -10,7 +10,8 @@
           <view class="add-image-preview-item">
             <view class="add-image-preview-item-container">
               <view class="add-image-preview-item-image-border">
-                <image class="add-image-preview-item-image" src="{{addImageDefault}}"
+                <image class="add-image-preview-item-bg" src="{{addImageDefault}}"></image>
+                <image class="add-image-preview-item-image" src="{{item}}"
                   data-index="{{index}}" bindtap="previewImage"></image>
                 <image class="add-image-preview-item-cancel" src="{{addImageCancel}}"
                   data-index="{{index}}" bindtap="cancelImage"></image>
@@ -23,28 +24,36 @@
   </view>
   <view class="content-container">
     <view class="content-title-container">
-      <input class="content-title-input" type="text"
-        placeholder="标题 请填写宝贝名称、型号等，方便买家搜索"
-        placeholder-class="placeholder-color" />
+      <input class="content-title-input" type="text" bindinput="inputTitle"
+        placeholder="标题 请填写宝贝名称、型号等，方便买家搜索" placeholder-class="placeholder-color" />
       <text class="content-title-count placeholder-color">0/22</text>
     </view>
     <view class="content-info-container">
-      <textarea class="content-info-textarea"
+      <textarea class="content-info-textarea" bindinput="inputDescription"
         placeholder="请输入商品内容信息" placeholder-class="placeholder-color" />
     </view>
     <view class="content-checkbox-container">
-      <checkbox value="1" checked="{{false}}" />
-      <text>全新</text>
+      <label class="content-checkbox-label" bindtap="checkboxIsNewTapped"><checkbox />全新</label>
     </view>
   </view>
   <view class="detail-container">
-    <block wx:for="{{detailWidgets}}" wx:key="*this">
+    <view class="detail-row">
+      <text>分类</text>
+      <picker bindchange="selectCategory" value="{{pickerIndex}}" range="{{categories}}">
+        <block wx:if="{{pickerIndex}}">
+          <text class="detail-placeholder-text">{{categories[pickerIndex]}}</text>
+        </block>
+        <block wx:else>
+          <text class="detail-placeholder-text placeholder-color">请选择分类</text>
+        </block>
+        <image class="detail-image" src="{{forwardArrow}}"></image>
+      </picker>
+    </view>
+    <block wx:for="{{detailWidgets}}" wx:key="title">
       <view class="detail-row">
         <text>{{item.title}}</text>
-        <view bindtap="{{item.method}}">
-          <text class="detail-placeholder-text placeholder-color">{{item.subtitle}}</text>
-          <image class="detail-image" src="{{forwardArrow}}"></image>
-        </view>
+        <input class="detail-input" type="{{item.inputType}}" bindinput="{{item.method}}"
+          placeholder="{{item.placeholder}}" placeholder-class="detail-placeholder-text placeholder-color" />
       </view>
     </block>
   </view>

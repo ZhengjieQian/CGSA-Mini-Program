@@ -4,15 +4,38 @@ App({
     cloudID: 'cgsa-mini-program-9e3o2q71fdb4e3',
     appID: 'wx4c183d2aec2c73a4',
     openID: '',
+    date: '',
     avatarDefaultImage: 'cloud://cgsa-mini-program-9e3o2q71fdb4e3.6367-cgsa-mini-program-9e3o2q71fdb4e3-1315632320/images/avatar/avatar_default.png'
   },
   onLaunch: function() {
     this.initCloudEnv();
+    this.getServerDate();
   },
   // 初始化云环境
   initCloudEnv() {
     wx.cloud.init({
       env: this.globalData.cloudID,
+    });
+  },
+  // 获取服务器时间
+  getServerDate() {
+    wx.cloud.callFunction({
+      name: 'getDate',
+      success: res => {
+        var utc_datetime = res.result;
+        // 转换日期格式
+        var T_pos = utc_datetime.indexOf('T');
+        var dot_pos = utc_datetime.indexOf('.');
+        var year_month_day = utc_datetime.substr(0, T_pos);
+        var hour_minute_second = utc_datetime.substr(T_pos + 1, dot_pos - T_pos - 1);
+        var new_datetime = year_month_day + " " + hour_minute_second;  // UTC YYYY-MM-DD HH:MM:SS
+        // 转换时区为 PST
+        var timestamp = new Date(Date.parse(new_datetime));
+        timestamp = timestamp.getTime();
+        timestamp = timestamp / 1000;
+        timestamp = timestamp - 8 * 60 * 60;
+        this.globalData.date = new Date(parseInt(timestamp) * 1000);
+      }
     });
   },
   // 获取用户的 openID
@@ -45,5 +68,5 @@ App({
         }
       });
     });
-  }
+  },
 });

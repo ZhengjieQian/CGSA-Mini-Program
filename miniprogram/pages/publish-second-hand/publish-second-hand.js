@@ -198,27 +198,30 @@ Page({
         icon: 'success',
         duration: 3000
       });
+      // console.log('');
+      // console.log('============================ 上传数据开始 ============================');
+      // console.log('_openid: ' + app.globalData.openID);
+      // console.log('comments: ' + []);
+      // console.log('date: ' + app.globalData.date);
+      // console.log('description: ' + this.data.description);
+      // console.log('images: ');
+      // console.log(this.data.imageCloudPaths);
+      // console.log('isNew: ' + this.data.isNew);
+      // console.log('likes: 0');
+      // console.log('location: ' + this.data.location);
+      // console.log('phone: ' + this.data.phone);
+      // console.log('price: ' + this.data.price);
+      // console.log('tag: ' + this.data.categories[this.data.pickerIndex]);
+      // console.log('title: ' + this.data.title);
+      // console.log('views: 0');
+      // console.log('wechat: ' + this.data.wechat);
+      // console.log('============================ 上传数据结束 ============================');
+      // console.log('');
+      setTimeout(() => {
+        wx.navigateBack();  // 3 秒后返回上一页
+      }, 3000);
     }).catch(err => {
       console.log(err);
     });
-    console.log('');
-    console.log('============================ 上传数据开始 ============================');
-    console.log('_openid: ' + app.globalData.openID);
-    console.log('comments: ' + []);
-    console.log('date: ' + app.globalData.date);
-    console.log('description: ' + this.data.description);
-    console.log('images: ');
-    console.log(this.data.imageCloudPaths);
-    console.log('isNew: ' + this.data.isNew);
-    console.log('likes: 0');
-    console.log('location: ' + this.data.location);
-    console.log('phone: ' + this.data.phone);
-    console.log('price: ' + this.data.price);
-    console.log('tag: ' + this.data.categories[this.data.pickerIndex]);
-    console.log('title: ' + this.data.title);
-    console.log('views: 0');
-    console.log('wechat: ' + this.data.wechat);
-    console.log('============================ 上传数据结束 ============================');
-    console.log('');
   }
-})
+});

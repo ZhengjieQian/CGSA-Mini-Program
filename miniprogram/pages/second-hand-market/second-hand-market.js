@@ -108,6 +108,9 @@ Page({
         ],
         addPostImage: '../../images/second-hand-market/add_post.png'
     },
+    onLoad: function() {
+
+    },
     // onReady() {
     //     this.setData({
     //         priceTitle: this.data.priceSortOptions[0].text,

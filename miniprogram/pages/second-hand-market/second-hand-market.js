@@ -109,7 +109,7 @@ Page({
         addPostImage: '../../images/second-hand-market/add_post.png'
     },
     onLoad: function() {
-      console.log('ok')
+      console.log('ok');
     },
     // onReady() {
     //     this.setData({

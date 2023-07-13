@@ -110,6 +110,7 @@ Page({
     },
     onLoad: function() {
       console.log('ok');
+      console.log('')
     },
     // onReady() {
     //     this.setData({

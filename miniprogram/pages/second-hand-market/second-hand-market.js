@@ -54,6 +54,7 @@ Page({
           products: res.data
         });
       });
+      console.log('ok');
     },
     // onReady() {
     //     this.setData({

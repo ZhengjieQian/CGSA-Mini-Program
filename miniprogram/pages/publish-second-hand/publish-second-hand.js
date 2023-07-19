@@ -32,6 +32,8 @@ Page({
     categories: ['电子产品', '交通工具', '家具家电', '厨房用品', '书籍教具', 
                  '美妆服饰', '宠物用品', '汽车用品', '文体器材', '票务卡券', '其他物品'],
     pickerIndex: '',
+    nickname: '',
+    avatarUrl: '',
     images: [],
     imageCloudPaths: [],
     imageUploadLimit: 9,  // 用户一次性可上传图片个数
@@ -39,6 +41,7 @@ Page({
     description: '',
     isNew: false,
     price: '',
+    previewDate: '',
     phone: '',
     wechat: '',
     location: ''
@@ -46,8 +49,24 @@ Page({
   // 页面生命周期 onLoad
   onLoad: function() {
     if(!app.globalData.openID) {  // 如果没有拿到用户的 openID，调用 app.js 的方法获取用户的 openID
-      app.getUserOpenID();
+      app.getUserOpenID().then(() => {
+        this.getUserNameAvatar();
+      });
+    } else {
+      this.getUserNameAvatar();
     }
+  },
+  // 获取用户名和头像
+  getUserNameAvatar() {
+    const userProfileDB = wx.cloud.database().collection('user_profile');
+    userProfileDB.where({
+      _openid: app.globalData.openID
+    }).get().then(res => {
+      this.setData({
+        nickname: res.data[0].nickname,
+        avatarUrl: res.data[0].avatarUrl
+      });
+    });
   },
   // 用户点击添加图片
   addImage() {
@@ -142,6 +161,8 @@ Page({
   },
   // 用户点击发布按钮，先上传图片
   postBtnTapped() {
+    app.getServerDate();
+    this.getPreviewDate();
     wx.showLoading({
       title: '正在发布中'
     });
@@ -173,11 +194,27 @@ Page({
       console.log(err);
     });
   },
+  // 获取 MM-dd 格式的日期用于展示
+  getPreviewDate() {
+    let dateArr = app.globalData.date.toLocaleDateString().split('/');
+    let month = dateArr[1];
+    let day = dateArr[2];
+    if (month.length == 1) {
+      month = '0' + month;
+    }
+    if (day.length == 1) {
+      day = '0' + day;
+    }
+    this.setData({
+      previewDate: month + '-' + day
+    });
+  },
   // 将整理好的信息上传到数据库
   uploadServerDB() {
     const productDB = wx.cloud.database().collection('second_hand_product');
     productDB.add({
       data: {
+        avatarUrl: this.data.avatarUrl,
         comments: [],
         date: app.globalData.date,
         description: this.data.description,
@@ -185,7 +222,10 @@ Page({
         isNew: this.data.isNew,
         likes: 0,
         location: this.data.location,
+        nickname: this.data.nickname,
         phone: this.data.phone,
+        previewDate: this.data.previewDate,
+        previewImage: this.data.imageCloudPaths[0],
         price: this.data.price,
         tag: this.data.categories[this.data.pickerIndex],
         title: this.data.title,

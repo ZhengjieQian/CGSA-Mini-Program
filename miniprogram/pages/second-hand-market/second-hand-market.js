@@ -44,72 +44,16 @@ Page({
             "其他物品"
         ],
         activeTagIndex: 0,
-        products: [
-            {
-                image: "../../images/second-hand-market/product_1.jpg",
-                title: "红色 高颜值自行车 骨折随缘出",
-                price: "60",
-                views: "72",
-                avatar: "../../images/second-hand-market/product_1_avatar.jpg",
-                username: "徐明玺Aaron",
-                location: "Los Angeles",
-                date: "04-26",
-            },
-            {
-                image: "../../images/second-hand-market/product_1.jpg",
-                title: "红色 高颜值自行车 骨折随缘出",
-                price: "60",
-                views: "72",
-                avatar: "../../images/second-hand-market/product_1_avatar.jpg",
-                username: "徐明玺Aaron",
-                location: "Los Angeles",
-                date: "04-26",
-            },
-            {
-                image: "../../images/second-hand-market/product_1.jpg",
-                title: "红色 高颜值自行车 骨折随缘出",
-                price: "60",
-                views: "72",
-                avatar: "../../images/second-hand-market/product_1_avatar.jpg",
-                username: "徐明玺Aaron",
-                location: "Los Angeles",
-                date: "04-26",
-            },
-            {
-                image: "../../images/second-hand-market/product_1.jpg",
-                title: "红色 高颜值自行车 骨折随缘出",
-                price: "60",
-                views: "72",
-                avatar: "../../images/second-hand-market/product_1_avatar.jpg",
-                username: "徐明玺Aaron",
-                location: "Los Angeles",
-                date: "04-26",
-            },
-            {
-                image: "../../images/second-hand-market/product_1.jpg",
-                title: "红色 高颜值自行车 骨折随缘出",
-                price: "60",
-                views: "72",
-                avatar: "../../images/second-hand-market/product_1_avatar.jpg",
-                username: "徐明玺Aaron",
-                location: "Los Angeles",
-                date: "04-26",
-            },
-            {
-                image: "../../images/second-hand-market/product_1.jpg",
-                title: "红色 高颜值自行车 骨折随缘出",
-                price: "60",
-                views: "72",
-                avatar: "../../images/second-hand-market/product_1_avatar.jpg",
-                username: "徐明玺Aaron",
-                location: "Los Angeles",
-                date: "04-26",
-            },
-        ],
+        products: [],
         addPostImage: '../../images/second-hand-market/add_post.png'
     },
     onLoad: function() {
-      wx.cloud.get();
+      const productDB = wx.cloud.database().collection('second_hand_product');
+      productDB.get().then(res => {
+        this.setData({
+          products: res.data
+        });
+      });
     },
     // onReady() {
     //     this.setData({

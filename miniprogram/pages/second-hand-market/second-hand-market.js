@@ -51,6 +51,7 @@ Page({
       const productDB = wx.cloud.database().collection('second_hand_product');
       productDB.get().then(res => {
         console.log(res.data);
+        console.log();
         this.setData({
           products: res.data
         });

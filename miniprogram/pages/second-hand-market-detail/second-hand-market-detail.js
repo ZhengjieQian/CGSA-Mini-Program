@@ -36,6 +36,7 @@ Page({
   },
   onReady: function () {
     this.calcDescOverflow();
+    console.log('ok');
   },
   calcDescOverflow() {
     const query = this.createSelectorQuery();

@@ -87,7 +87,6 @@ Page({
         ],
     },
     navigate(e) {
-      console.log(e);
         wx.navigateTo({
             url: e.currentTarget.dataset.link,
         });
